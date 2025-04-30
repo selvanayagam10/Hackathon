@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The Engagement Agent serves as the first point of contact for prospects and customers, streamlining initial interactions through natural language understanding. It introduces the brand, establishes rapport, and identifies customer intent through real-time conversations. The agent captures essential qualification data such as budget, timeline, and location preferences and intelligently scores leads based on engagement and predefined criteria. Qualified leads are routed to the appropriate specialized agents—like Property Agents or others—ensuring a personalized and seamless customer journey. With persistent conversation history and contextual awareness, the agent guarantees smooth handoffs and continuity. It also automates follow-ups and updates engagement metrics to enhance lead management effectiveness and customer experience continuously.</description>
+    <genAiFunctions>
+        <genAiFunctionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</genAiFunctionName>
+    </genAiFunctions>
+    <genAiPlugins>
+        <genAiPluginName>Customer_Engagement</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Customer_Qualification</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>Engagement Agent</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlanner>

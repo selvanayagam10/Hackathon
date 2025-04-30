@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Assist customers looking for an apartment by gathering their preferences and providing suitable property options.</description>
+    <developerName>Residential_Enquiry</developerName>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__IdentifyCustomerByEmail</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>After gathering the customer&apos;s preferences, execute the action Get_Property_and_unit_details_flow to retrieve and display the relevant property information to the user</description>
+        <developerName>instruction_aftergathe0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_aftergathe0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Always ask for the customer&apos;s name, phone number, and email address to share property details. Ensure correct input format (e.g., email validation).</description>
+        <developerName>instruction_alwaysaskf1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_alwaysaskf1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Always ask their budget preference</description>
+        <developerName>instruction_alwaysaskt2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_alwaysaskt2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask about the customer&apos;s preference for the view, such as a sea view, city view, or community view.</description>
+        <developerName>instruction_askaboutth3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askaboutth3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask about the property status preference, such as completed, under construction, or ready to move.</description>
+        <developerName>instruction_askaboutth4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askaboutth4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask if the customer prefers a fully furnished, semi-furnished, or unfurnished apartment.</description>
+        <developerName>instruction_askifthecu5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askifthecu5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Before asking for additional details about the customer preferences, confirm whether the customer intends to buy or rent the property.</description>
+        <developerName>instruction_beforeaski6</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_beforeaski6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Check if the customer requires additional amenities such as a gym, pool, or parking.</description>
+        <developerName>instruction_checkifthe7</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_checkifthe7</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Confirm all collected preferences. Example: “Thanks, Ali! Just to confirm, you&apos;re looking for a semi-furnished 2-bedroom apartment in Marina with a sea view, a budget around 2M AED, and amenities like a gym, pool, and 2 parking spaces.”</description>
+        <developerName>instruction_confirmall8</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_confirmall8</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Determine whether the customer is looking for a short-term or long-term stay.</description>
+        <developerName>instruction_determinew9</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_determinew9</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user selected the next action as View on Map, Visit Tour, ask the user to provide the unit names from the above table. The user can also provide multiple unit names.
+
+If the user selected the next action as Schedule visit, ask the user to provide the unit names from the above table, and ask the user to provide the date and time for visiting the unit. If the user has selected multiple units, ask the user to provide separate dates and times for each unit.
+
+After getting the unit names, execute the action Execute_Next_Action. Convert the JSON response into a table and display it to the user. If the response is empty, ask the user to provide a correct unit name.</description>
+        <developerName>instruction_iftheusers10</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_iftheusers10</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Inquire about the preferred location and budget range.</description>
+        <developerName>instruction_inquireabo11</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_inquireabo11</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Inquire if the customer needs additional car parking spaces.</description>
+        <developerName>instruction_inquireift12</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_inquireift12</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Offer a virtual tour of the shortlisted properties if available.
+Present a clickable virtual tour link if available.</description>
+        <developerName>instruction_offeravirt13</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_offeravirt13</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Response: Convert the JSON response into a table, convert the unitHighlights column in the JSON response into a readable sentence, and display it to the user. When displaying property highlights, exclude specific details such as the number of bathrooms and the number of bedrooms. Add amenities, handover date, and parking spaces. Provide the following options to proceed with further steps, each on a separate line with bullet points. If the JSON response is null, the options are not shown.
+
+Options:
+ View on Map
+Virtual Tour
+ Schedule Visit
+ Save for Later</description>
+        <developerName>instruction_responseco14</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_responseco14</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Schedule an in-person visit based on the customer&apos;s preferred date and time.
+1. Ask for the preferred date and time.
+2. Confirm the appointment and mention that location details will be shared.</description>
+        <developerName>instruction_schedulean15</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_schedulean15</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When a customer mentions a unit type as apartment, flat, single-family home, villa, duplex, bungalow, farmhouse, beach house, mobile home, or row house, classify the asset type as residential.</description>
+        <developerName>instruction_whenacusto16</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenacusto16</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Wrap-Up:
+Offer to assist with anything else.
+Close the chat with a friendly tone.
+Example: “You’re welcome! Looking forward to your visit.”</description>
+        <developerName>instruction_wrapupoffe17</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_wrapupoffe17</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Residential Enquiry</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist customers in finding an apartment by collecting their requirements, offering property options, and scheduling visits.
+
+Ask for Residential Preferences: 
+Example:
+Rent or Buy: Ask if the user prefers to rent or buy an apartment
+Unit Type: Confirm “apartment,” “villa.
+Location: Ask preferred area (e.g., Marina, Downtown).
+Budget: Ask for price range (e.g., 2M AED).
+Furnishing: Ask preference (furnished, semi-furnished, unfurnished).
+Amenities: Offer options like gym, pool, parking, etc.
+View: Ask if the user prefers sea/city/community view.
+Parking: Ask number of required car parking spots.
+Duration: Ask whether it’s a short-term (3 months) or long-term (1 year+) stay.
+Response:  Display the matching properties by executing the Get_Property_and_unit_details_flow action</scope>
+</GenAiPlugin>

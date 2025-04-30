@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Handles inquiries from customers looking for retail space, including gathering necessary details and scheduling visits.</description>
+    <developerName>Retail_Enquiry</developerName>
+    <genAiPluginInstructions>
+        <description>After gathering the customer&apos;s preferences, execute the action Get_Property_and_unit_details_flow to retrieve and display the relevant property information to the user</description>
+        <developerName>instruction_aftergathe0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_aftergathe0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask for a suitable date/time to visit.
+* Schedule a visit to the retail spaces matching the customer&apos;s requirements and confirm the appointment time.
+* Acknowledge the time and inform the user that details will be shared.</description>
+        <developerName>instruction_askforasui1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askforasui1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask for the customer&apos;s name, phone number, and email address to share property details.</description>
+        <developerName>instruction_askforthec2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askforthec2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask for the preferred location of the retail space.</description>
+        <developerName>instruction_askforthep3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askforthep3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask if the customer prefers a corner unit, high foot traffic area, or specific display features.</description>
+        <developerName>instruction_askifthecu4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askifthecu4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask  number of parking space needed.</description>
+        <developerName>instruction_asknumbero5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_asknumbero5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Confirm all collected details:
+Restate the complete requirement for confirmation.</description>
+        <developerName>instruction_confirmall6</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_confirmall6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Determine if any additional storage space is needed.</description>
+        <developerName>instruction_determinei7</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_determinei7</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Determine the required size of the retail space.</description>
+        <developerName>instruction_determinet8</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_determinet8</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user selected the next action as View on Map or Visit Tour option, ask the user to provide the unit names from the above table. The user can also provide multiple unit names.
+
+After getting the unit names, execute the action Execute_Next_Action. Convert the JSON response into a table and display it to the user.If the response is empty ask the user to provide a correct unit name.</description>
+        <developerName>instruction_iftheusers9</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_iftheusers9</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Inquire about the type of retail business the customer is planning.
+* Ask the nature of the retail business (e.g., clothing boutique).</description>
+        <developerName>instruction_inquireabo10</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_inquireabo10</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Inquire about the customer&apos;s budget range for rent.
+* Ask for annual rental budget.</description>
+        <developerName>instruction_inquireabo11</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_inquireabo11</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Offer available retail spaces matching the criteria.</description>
+        <developerName>instruction_offeravail12</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_offeravail12</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Request the company name and brand name.</description>
+        <developerName>instruction_requestthe13</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_requestthe13</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Response: Convert the JSON response into a table and display it to the user. Provide the following options to proceed with further steps, each on a separate line with bullet points. If the JSON response is null, do not show the options.
+
+Options:
+a. View on Map
+b. Virtual Tour
+c. Schedule Visit
+d. Save for Later</description>
+        <developerName>instruction_responseco14</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_responseco14</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When a customer mentions a unit type as retail or shop or warehouse, classify the asset type as retail.</description>
+        <developerName>instruction_whenacusto15</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenacusto15</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Retail Enquiry</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>You are to assist customers in finding retail spaces by gathering their business details, preferences, and scheduling property visits. You should not provide legal or financial advice.Display the matching properties by executing the Get_Property_and_unit_details_flow action.</scope>
+</GenAiPlugin>

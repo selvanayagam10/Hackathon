@@ -1,0 +1,753 @@
+<!-- voiceAgent.html -->
+<template>
+    <div class="app-container" role="main">
+        <!-- Guided Tour -->
+        <template if:true={showTour}>
+            <div class="tour-overlay" role="dialog" aria-labelledby="tour-title">
+                <div class="tour-content">
+                    <header class="tour-header">
+                        <h2 id="tour-title">{currentTourStepData.title}</h2>
+                        <lightning-button-icon
+                            icon-name="utility:close"
+                            variant="bare"
+                            alternative-text="Close tour"
+                            onclick={closeTour}
+                            class="close-button">
+                        </lightning-button-icon>
+                    </header>
+                    <div class="tour-body">
+                        <div class="tour-step-content">
+                            <lightning-icon 
+                                icon-name={currentTourStepData.icon} 
+                                size="medium"
+                                class="tour-step-icon">
+                            </lightning-icon>
+                            <p>{currentTourStepData.content}</p>
+                        </div>
+                        <div class="tour-progress">
+                            <div class="progress-dots">
+                                <template for:each={tourSteps} for:item="step">
+                                    <span 
+                                        key={step.id}
+                                        class={progressDotClass}
+                                        onclick={jumpToStep}
+                                        data-step={step.id}>
+                                    </span>
+                                </template>
+                            </div>
+                            <div class="tour-actions">
+                                <lightning-button
+                                    label="Previous"
+                                    variant="neutral"
+                                    onclick={previousTourStep}
+                                    disabled={isFirstStep}
+                                    class="tour-button">
+                                </lightning-button>
+                                <lightning-button
+                                    label={nextButtonLabel}
+                                    variant="brand"
+                                    onclick={nextTourStep}
+                                    class="tour-button">
+                                </lightning-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Contextual Help -->
+        <div class="contextual-help" role="complementary" aria-label="Help">
+            <lightning-button-icon
+                icon-name="utility:help"
+                size="small"
+                variant="bare"
+                alternative-text="Help"
+                onclick={toggleHelp}
+                class="help-button">
+            </lightning-button-icon>
+            <template if:true={showHelp}>
+                <div class="help-content">
+                    <h3>Need Help?</h3>
+                    <p>Here are some quick tips:</p>
+                    <ul>
+                        <li>Use the search bar to find specific items</li>
+                        <li>Click on notifications to view details</li>
+                        <li>Use keyboard shortcuts for quick actions</li>
+                    </ul>
+                    <lightning-button
+                        label="View Full Guide"
+                        variant="brand"
+                        onclick={openFullGuide}>
+                    </lightning-button>
+                </div>
+            </template>
+        </div>
+
+        <!-- Success/Error Toasts -->
+        <template if:true={showToast}>
+            <div class="toast-container" role="alert">
+                <div class={toastContainerClass}>
+                    <lightning-icon
+                        icon-name={toastIcon}
+                        size="small"
+                        class="toast-icon">
+                    </lightning-icon>
+                    <div class="toast-content">
+                        <h4>{toastTitle}</h4>
+                        <p>{toastMessage}</p>
+                    </div>
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        variant="bare"
+                        alternative-text="Close toast"
+                        onclick={closeToast}>
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </template>
+
+        <!-- Left Sidebar -->
+        <div class="sidebar" role="complementary" aria-label="Navigation sidebar">
+            <div class="sidebar-header">
+                <div class="workspace-info" onclick={handleHomeClick}>
+                    <div class="workspace-logo">BN</div>
+                    <h1 class="workspace-name">BlueNest</h1>
+                </div>
+            <!--   <div class="ai-power-indicator" onclick={showAIInfo}>
+                    <lightning-icon icon-name="utility:einstein" size="x-small"></lightning-icon>
+                    <span>AI-enhanced</span>
+                </div> --> 
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul>
+                    <li class={homeNavClass} onclick={handleHomeClick}>
+                        <lightning-icon icon-name="standard:skill_entity" size="small"></lightning-icon>
+                        <span>Agents</span>
+                    </li>
+                    <li class={chatNavClass} onclick={handleChatClick}>
+                        <lightning-icon icon-name="standard:live_chat" size="small"></lightning-icon>
+                        <span>Chat</span>
+                    </li>
+                    <li class="nav-item" onclick={handleActivityClick}>
+                        <lightning-icon icon-name="standard:work_type_group" size="small"></lightning-icon>
+                        <span>Activity</span>
+                    </li>
+                    <li class="nav-item" onclick={handleNotificationClick}>
+                        <lightning-icon icon-name="standard:announcement" size="small"></lightning-icon>
+                        <span>Notification</span>
+                    </li>
+                    <li class="nav-item" onclick={handleCalendarClick}>
+                        <lightning-icon icon-name="standard:event" size="small"></lightning-icon>
+                        <span>Calendar</span>
+                    </li>
+                    <li class="nav-item" onclick={handleScheduleClick}>
+                        <lightning-icon icon-name="standard:schedule_objective" size="small"></lightning-icon>
+                        <span>Schedule</span>
+                    </li>
+                </ul>
+            </nav>
+
+           
+            <!-- Sections -->
+            <!-- Apps Section -->
+            <div class="apps-section">
+                <h2 class="section-title">Collaborative Tools</h2>
+                <nav class="nav-menu">
+                    <ul class="app-list">
+                        <li class="nav-item" onclick={handleSlackClick}>
+                            <lightning-icon icon-name="utility:slack" size="small"></lightning-icon>
+                            <span>Slack</span>
+                        </li>
+                        <li class="nav-item" onclick={handleTeamsClick}>
+                            <lightning-icon icon-name="utility:people" size="small"></lightning-icon>
+                            <span>Teams</span>
+                        </li>
+                        <li class="nav-item" onclick={handleZoomClick}>
+                            <lightning-icon icon-name="utility:video" size="small"></lightning-icon>
+                            <span>Zoom</span>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+
+ 
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" role="main">
+            <!-- Header -->
+            <header class="content-header" role="banner">
+                <div class="search-container">
+                    <lightning-input
+                        type="search"
+                        label="Search"
+                        placeholder={searchPlaceholder}
+                        variant="label-hidden"
+                        onchange={handleSearch}
+                        aria-label="Search">
+                    </lightning-input>
+                </div>
+                <div class="header-actions" role="toolbar" aria-label="Header actions">
+                    <lightning-button-icon
+                        icon-name="utility:help"
+                        variant="bare"
+                        alternative-text="Start Tour"
+                        title="Start Guided Tour"
+                        onclick={startTour}
+                        class="header-icon">
+                    </lightning-button-icon>
+                    <lightning-button-icon
+                        icon-name="utility:settings"
+                        variant="bare"
+                        alternative-text="Settings"
+                        title="Customize Settings"
+                        class="header-icon">
+                    </lightning-button-icon>
+                    <lightning-button-icon
+                        icon-name="utility:dayview"
+                        variant="bare"
+                        alternative-text="Toggle Dark Mode"
+                        title="Toggle Dark Mode"
+                        onclick={toggleDarkMode}
+                        class="header-icon">
+                    </lightning-button-icon>
+                </div>
+            </header>
+
+            <!-- Home View -->
+            <template if:true={isHomeView}>
+                <div class="app-content">
+                    <div class="content-header">
+                        <h1 class="workspace-name">Select an AI Assistant</h1>
+                        <div class="header-actions">
+                            <lightning-button-icon 
+                                icon-name="utility:info" 
+                                variant="bare" 
+                                alternative-text="About these AI assistants" 
+                                title="About these AI assistants" 
+                                onclick={showAICapabilities}>
+                            </lightning-button-icon>
+                        </div>
+                    </div>
+                    <div class="agentic-controls">
+                        <div class="control-option">
+                            <lightning-input type="checkbox" label="Show AI-powered agents only" checked={showAIOnly} onchange={handleShowAIOnly}></lightning-input>
+                        </div>
+                    </div>
+                    <div class="app-grid">
+                        <template for:each={filteredAgents} for:item="agent">
+                            <div key={agent.id} class="app-card" onclick={handleAgentSelect} data-agent-id={agent.id}>
+                                <template if:true={agent.isNew}>
+                                    <span class="badge new">NEW</span>
+                                </template>
+                                <template if:true={agent.isPopular}>
+                                    <span class="badge popular">PRIMARY</span>
+                                </template>
+                                <template if:true={agent.isAIPowered}>
+                                    <span class="badge ai">AI-POWERED</span>
+                                </template>
+                                <div class="app-card-header">
+                                    <div class="app-card-icon-container">
+                                        <lightning-icon icon-name={agent.icon} size="large" class="app-card-icon" alternative-text={agent.label}></lightning-icon>
+                                    </div>
+                                    <div class="app-card-info">
+                                        <div class="agent-title-container">
+                                            <h3>{agent.label}</h3>
+                                        </div>
+                                        <p>{agent.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+
+
+            <!-- Chat View -->
+            <template if:true={isChatView}>
+                <div class="chat-view-container">
+                    <c-voice-agent-chat 
+                        record-id={recordId}
+                        selected-agent={selectedAgent}
+                        selected-agent-id={selectedAgentId}>
+                    </c-voice-agent-chat>
+                </div>
+            </template>
+
+            
+            <!-- AI Capabilities Modal -->
+            <template if:true={showCapabilities}>
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="capabilities-modal">
+                    <div class="capabilities-content">
+                        <header class="capabilities-header">
+                            <h2 id="modal-heading-01">
+                                <lightning-icon icon-name="utility:einstein" size="small"></lightning-icon>
+                                About AI Assistants
+                            </h2>
+                            <lightning-button-icon icon-name="utility:close" variant="bare" alternative-text="Close" title="Close" onclick={hideAICapabilities}></lightning-button-icon>
+                        </header>
+                        <div class="capabilities-body" id="modal-content-id-1">
+                            <h3>What AI assistants can do:</h3>
+                            <ul>
+                                <li>Answer questions about properties, listings, and real estate processes</li>
+                                <li>Help draft messages and responses to clients</li>
+                                <li>Summarize property details and client interactions</li>
+                                <li>Provide real-time guidance during client conversations</li>
+                            </ul>
+                            
+                            <h3>Limitations:</h3>
+                            <ul>
+                                <li>May not have access to the most recent data or listings</li>
+                                <li>Cannot make decisions or take actions without your approval</li>
+                                <li>May occasionally provide incomplete or inaccurate information</li>
+                                <li>Should not be used for legal, financial, or highly sensitive advice</li>
+                            </ul>
+                            
+                            <div class="privacy-notice">
+                                <p><strong>Privacy notice:</strong> AI assistants analyze your inputs to provide relevant responses. All data is processed according to Salesforce's privacy policy and your organization's security settings.</p>
+                            </div>
+                            
+                            <lightning-button label="Got it" variant="brand" onclick={hideAICapabilities}></lightning-button>
+                        </div>
+                    </div>
+                </section>
+            </template>
+
+            <!-- Agent Specific Capabilities Modal -->
+            <template if:true={showAgentDetail}>
+                <section role="dialog" tabindex="-1" aria-labelledby="agent-modal-heading" aria-modal="true" aria-describedby="agent-modal-content" class="capabilities-modal">
+                    <div class="capabilities-content">
+                        <header class="capabilities-header">
+                            <h2 id="agent-modal-heading">
+                                <lightning-icon icon-name={selectedAgentIcon} size="small" class="slds-m-right_x-small"></lightning-icon>
+                                {selectedAgentName}
+                            </h2>
+                            <div class="slds-no-flex">
+                                <lightning-button 
+                                    label="Select" 
+                                    variant="brand" 
+                                    onclick={selectCurrentAgent}>
+                                </lightning-button>
+
+                                <lightning-button 
+                                        label="Cancel" 
+                                        variant="neutral" 
+                                        onclick={hideAgentCapabilities}>
+                                </lightning-button>
+                            
+                            <!--    <lightning-button-icon 
+                                    icon-name="utility:close"
+                                    variant="bare"
+                                    alternative-text="Close"
+                                    title="Close"
+                                    onclick={hideAgentCapabilities}>
+                                </lightning-button-icon> -->
+                            </div>
+                        </header>
+                        <div class="capabilities-body" id="agent-modal-content">
+                            <p class="agent-description">{selectedAgentDescription}</p>
+                            
+                            <h3>This AI assistant can:</h3>
+                            <ul>
+                                <template for:each={selectedAgentCapabilities} for:item="capability">
+                                    <li key={capability}>{capability}</li>
+                                </template>
+                            </ul>
+                            
+                            <h3>Limitations:</h3>
+                            <ul>
+                                <template for:each={selectedAgentLimitations} for:item="limitation">
+                                    <li key={limitation}>{limitation}</li>
+                                </template>
+                            </ul>
+                            
+                            <div class="privacy-notice">
+                                <p>
+                                    <strong>Privacy notice:</strong> All interactions with this AI assistant are recorded to improve service quality. You remain in control of any actions suggested by the AI.
+                                </p>
+                            </div>
+                            
+                            <div class="slds-grid slds-grid_align-center slds-gutters slds-m-top_medium">
+                                <div class="slds-col">
+                                    <lightning-button 
+                                        label="Select this assistant" 
+                                        variant="brand" 
+                                        onclick={selectCurrentAgent}>
+                                    </lightning-button>
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-button 
+                                        label="Cancel" 
+                                        variant="neutral" 
+                                        onclick={hideAgentCapabilities}>
+                                    </lightning-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </template>
+
+            <!-- Agent Info Modal -->
+            <template if:true={showAgentInfo}>
+                <div class="slds-modal slds-fade-in-open" role="dialog">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__header">
+                            <h2 class="slds-text-heading_medium">Agent Information</h2>
+                            <button class="slds-button slds-button_icon slds-modal__close" onclick={handleCloseAgentInfo}>
+                                <lightning-icon icon-name="utility:close" size="small"></lightning-icon>
+                            </button>
+                        </div>
+                        <div class="slds-modal__content slds-p-around_medium">
+                            <template if:true={currentAgentInfo}>
+                                <div class="slds-grid slds-grid_vertical">
+                                    <div class="slds-grid slds-grid_align-spread">
+                                        <div class="slds-grid slds-grid_align-center">
+                                            <lightning-icon icon-name={currentAgentInfo.icon} size="small" class="slds-m-right_x-small"></lightning-icon>
+                                            <h3 class="slds-text-heading_small">{currentAgentInfo.name}</h3>
+                                        </div>
+                                    </div>
+                                    <div class="slds-m-top_medium">
+                                        <p class="slds-text-body_regular">{currentAgentInfo.description}</p>
+                                    </div>
+                                    <div class="slds-m-top_medium">
+                                        <h4 class="slds-text-heading_small">Capabilities</h4>
+                                        <ul class="slds-list_dotted">
+                                            <template for:each={currentAgentInfo.capabilities} for:item="capability">
+                                                <li key={capability}>{capability}</li>
+                                            </template>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </template>
+
+            <!-- Activity View -->
+            <template if:true={isActivityView}>
+                <div class="activity-view-container" role="region" aria-label="Activity">
+                    <div class="slds-tabs_default" role="tablist">
+                        <ul class="slds-tabs_default__nav" role="tablist" aria-label="Activity Sections">
+                            <!-- Chat Summary Tab -->
+                            <li class="slds-tabs_default__item slds-is-active" role="presentation">
+                                <a class="slds-tabs_default__link" role="tab" tabindex="0" 
+                                   aria-selected="true" aria-controls="chat-summary" 
+                                   id="chat-summary-tab" onclick={handleTabClick} 
+                                   data-tab="chat-summary">
+                                    <lightning-icon icon-name="utility:chat" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                    Chat Summary
+                                </a>
+                            </li>
+                            <!-- Action Items Tab -->
+                            <li class="slds-tabs_default__item" role="presentation">
+                                <a class="slds-tabs_default__link" role="tab" tabindex="-1" 
+                                   aria-selected="false" aria-controls="action-items" 
+                                   id="action-items-tab" onclick={handleTabClick} 
+                                   data-tab="action-items">
+                                    <lightning-icon icon-name="utility:task" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                    Action Items
+                                </a>
+                            </li>
+                            <!-- Knowledge Articles Tab -->
+                            <li class="slds-tabs_default__item" role="presentation">
+                                <a class="slds-tabs_default__link" role="tab" tabindex="-1" 
+                                   aria-selected="false" aria-controls="knowledge-articles" 
+                                   id="knowledge-articles-tab" onclick={handleTabClick} 
+                                   data-tab="knowledge-articles">
+                                    <lightning-icon icon-name="utility:knowledge_base" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                    Knowledge Articles
+                                </a>
+                            </li>
+                            <!-- Recommendations Tab -->
+                            <li class="slds-tabs_default__item" role="presentation">
+                                <a class="slds-tabs_default__link" role="tab" tabindex="-1" 
+                                   aria-selected="false" aria-controls="recommendations" 
+                                   id="recommendations-tab" onclick={handleTabClick} 
+                                   data-tab="recommendations">
+                                    <lightning-icon icon-name="utility:light_bulb" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                    Recommendations
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Chat Summary Content -->
+                        <div id="chat-summary" class="slds-tabs_default__content slds-show" 
+                             role="tabpanel" aria-labelledby="chat-summary-tab">
+                            <template if:true={isLoadingChatSummary}>
+                                <div class="slds-is-relative slds-p-around_medium">
+                                    <lightning-spinner alternative-text="Loading chat summary" size="small"></lightning-spinner>
+                                </div>
+                            </template>
+                            <template if:false={isLoadingChatSummary}>
+                                <div class="chat-summary-content slds-p-around_medium">
+                                    <template for:each={chatSummaryItems} for:item="item">
+                                        <div key={item.id} class="chat-summary-item slds-m-bottom_medium">
+                                            <div class="slds-grid slds-grid_align-spread">
+                                                <h3 class="slds-text-heading_small">{item.title}</h3>
+                                                <span class="slds-text-body_small">{item.timestamp}</span>
+                                            </div>
+                                            <div class="chat-summary-details slds-p-top_x-small">
+                                                <template for:each={item.details} for:item="detail">
+                                                    <p key={detail} class="slds-text-body_regular slds-m-vertical_xx-small">{detail}</p>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+
+                        <!-- Action Items Content -->
+                        <div id="action-items" class="slds-tabs_default__content slds-hide" 
+                             role="tabpanel" aria-labelledby="action-items-tab">
+                            <template if:true={isLoadingActionItems}>
+                                <div class="slds-is-relative slds-p-around_medium">
+                                    <lightning-spinner alternative-text="Loading action items" size="small"></lightning-spinner>
+                                </div>
+                            </template>
+                            <template if:false={isLoadingActionItems}>
+                                <div class="action-items-content slds-p-around_medium">
+                                    <template for:each={actionItems} for:item="item">
+                                        <article key={item.id} class="action-item slds-card slds-m-bottom_small">
+                                            <div class="slds-card__header slds-grid">
+                                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                                    <div class="slds-media__body">
+                                                        <h3 class="slds-text-heading_small">{item.description}</h3>
+                                                        <div class="slds-grid slds-grid_vertical-align-center slds-m-top_x-small">
+                                                            <span class="slds-badge slds-badge_success slds-m-right_small">{item.priority}</span>
+                                                            <div class="slds-col">
+                                                                <p class="slds-text-body_small">Due: {item.dueDate}</p>
+                                                            </div>
+                                                            <div class="slds-col">
+                                                                <p class="slds-text-body_small">Status: {item.status}</p>
+                                                            </div>
+                                                            <div class="slds-col">
+                                                                <p class="slds-text-body_small">Assigned to: {item.assignee}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </header>
+                                            </div>
+                                        </article>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+
+                        <!-- Knowledge Articles Content -->
+                        <div id="knowledge-articles" class="slds-tabs_default__content slds-hide" 
+                             role="tabpanel" aria-labelledby="knowledge-articles-tab">
+                            <template if:true={isLoadingKnowledgeArticles}>
+                                <div class="slds-is-relative slds-p-around_medium">
+                                    <lightning-spinner alternative-text="Loading knowledge articles" size="small"></lightning-spinner>
+                                </div>
+                            </template>
+                            <template if:false={isLoadingKnowledgeArticles}>
+                                <div class="knowledge-articles-content slds-p-around_medium">
+                                    <template for:each={knowledgeArticles} for:item="article">
+                                        <article key={article.id} class="knowledge-article slds-card slds-m-bottom_small">
+                                            <div class="slds-card__header slds-grid">
+                                                <header class="slds-media slds-media_center">
+                                                    <div class="slds-media__body">
+                                                        <h3 class="slds-text-heading_small">
+                                                            <a href={article.url} target="_blank" class="slds-text-link">{article.title}</a>
+                                                        </h3>
+                                                        <div class="slds-grid slds-grid_vertical-align-center slds-m-top_x-small">
+                                                            <span class="slds-badge slds-m-right_small">{article.category}</span>
+                                                            <p class="slds-text-body_small">Last Updated: {article.lastUpdated}</p>
+                                                        </div>
+                                                    </div>
+                                                </header>
+                                            </div>
+                                            <div class="slds-card__body slds-card__body_inner">
+                                                <p class="slds-text-body_regular">{article.summary}</p>
+                                            </div>
+                                        </article>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+
+                        <!-- Recommendations Content -->
+                        <div id="recommendations" class="slds-tabs_default__content slds-hide" 
+                             role="tabpanel" aria-labelledby="recommendations-tab">
+                            <template if:true={isLoadingRecommendations}>
+                                <div class="slds-is-relative slds-p-around_medium">
+                                    <lightning-spinner alternative-text="Loading recommendations" size="small"></lightning-spinner>
+                                </div>
+                            </template>
+                            <template if:false={isLoadingRecommendations}>
+                                <div class="recommendations-content slds-p-around_medium">
+                                    <template for:each={recommendations} for:item="rec">
+                                        <article key={rec.id} class="recommendation slds-card slds-m-bottom_small">
+                                            <div class="slds-card__header">
+                                                <header class="slds-media slds-media_center">
+                                                    <div class="slds-media__figure">
+                                                        <lightning-icon icon-name="utility:light_bulb" size="small"></lightning-icon>
+                                                    </div>
+                                                    <div class="slds-media__body">
+                                                        <h3 class="slds-text-heading_small">{rec.action}</h3>
+                                                        <div class="slds-grid slds-grid_vertical-align-center slds-m-top_x-small">
+                                                            <span class="slds-badge slds-badge_success slds-m-right_small">{rec.priority}</span>
+                                                            <span class="slds-badge slds-m-right_small">{rec.category}</span>
+                                                        </div>
+                                                    </div>
+                                                </header>
+                                            </div>
+                                            <div class="slds-card__body slds-card__body_inner">
+                                                <div class="slds-grid slds-grid_align-end slds-m-top_small">
+                                                    <lightning-button-group>
+                                                        <lightning-button label="Accept" variant="brand" onclick={handleAcceptRecommendation} data-id={rec.id}></lightning-button>
+                                                        <lightning-button label="Dismiss" variant="neutral" onclick={handleDismissRecommendation} data-id={rec.id}></lightning-button>
+                                                    </lightning-button-group>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </template>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Notification View -->
+            <template if:true={isNotificationView}>
+                <div class="notification-view-container" role="region" aria-label="Notifications">
+                    <div class="slds-card">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center">
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">Notifications</h2>
+                                </div>
+                                <div class="slds-no-flex">
+                                    <lightning-button-icon icon-name="utility:refresh" variant="border-filled" alternative-text="Refresh" title="Refresh" onclick={handleRefreshNotifications}></lightning-button-icon>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body">
+                            <lightning-spinner if:true={isLoadingNotifications} alternative-text="Loading" size="small"></lightning-spinner>
+                            <template if:true={notifications}>
+                                <ul class="slds-has-dividers_bottom-space">
+                                    <template for:each={notifications} for:item="notification">
+                                        <li key={notification.id} class="notification-item" class:unread={notification.unread}>
+                                            <div class="slds-grid slds-grid_align-spread">
+                                                <div class="slds-col">
+                                                    <div class="slds-media">
+                                                        <div class="slds-media__figure">
+                                                            <div class="notification-icon" data-icon-color={notification.iconColor}>
+                                                                <lightning-icon icon-name={notification.icon} size="small" alternative-text={notification.type}></lightning-icon>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slds-media__body">
+                                                            <p class="slds-text-body_regular">{notification.message}</p>
+                                                            <p class="notification-time">{notification.timestamp}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-col slds-no-flex slds-text-align_right">
+                                                    <lightning-button-icon icon-name="utility:close" variant="border-filled" alternative-text="Dismiss" title="Dismiss" onclick={handleDismissNotification} data-id={notification.id}></lightning-button-icon>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Calendar View -->
+            <template if:true={isCalendarView}>
+                <div class="calendar-view-container">
+                    <div class="slds-card">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="utility:event" size="small"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">Calendar</h2>
+                                </div>
+                            </header>
+                            <div class="slds-no-flex">
+                                <lightning-button-group>
+                                    <lightning-button label="Day" onclick={handleCalendarViewChange} data-view="day"></lightning-button>
+                                    <lightning-button label="Week" onclick={handleCalendarViewChange} data-view="week"></lightning-button>
+                                    <lightning-button label="Month" onclick={handleCalendarViewChange} data-view="month"></lightning-button>
+                                </lightning-button-group>
+                            </div>
+                        </div>
+                        <div class="slds-card__body">
+                            <lightning-calendar 
+                                selected-date={selectedDate}
+                                events={calendarEvents}
+                                onselect={handleDateSelect}
+                                class="calendar-component">
+                            </lightning-calendar>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Schedule View -->
+            <template if:true={isScheduleView}>
+                <div class="schedule-view-container" role="region" aria-label="Schedule">
+                    <div class="slds-card">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media_center">
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">Schedule</h2>
+                                </div>
+                                <div class="slds-no-flex">
+                                    <lightning-button-icon icon-name="utility:add" variant="border-filled" alternative-text="Add Schedule" title="Add Schedule" onclick={handleAddSchedule}></lightning-button-icon>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body">
+                            <lightning-spinner if:true={isLoadingSchedule} alternative-text="Loading" size="small"></lightning-spinner>
+                            <template if:true={schedules}>
+                                <ul class="slds-has-dividers_bottom-space">
+                                    <template for:each={schedules} for:item="schedule">
+                                        <div key={schedule.id} class="schedule-item">
+                                            <div class="slds-grid slds-grid_align-spread">
+                                                <div class="slds-col">
+                                                    <h3 class="schedule-title">{schedule.title}</h3>
+                                                    <div class="schedule-description">
+                                                        <span class="schedule-time">
+                                                            <lightning-icon icon-name="utility:event" size="x-small"></lightning-icon>
+                                                            {schedule.startDateTime} - {schedule.endDateTime}
+                                                        </span>
+                                                        <span class="schedule-location">
+                                                            <lightning-icon icon-name="utility:location" size="x-small"></lightning-icon>
+                                                            {schedule.location}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="slds-col slds-no-flex slds-text-align_right">
+                                                    <lightning-button-group>
+                                                        <lightning-button-icon icon-name="utility:edit" variant="border-filled" alternative-text="Edit" title="Edit" onclick={handleEditSchedule} data-id={schedule.id}></lightning-button-icon>
+                                                        <lightning-button-icon icon-name="utility:delete" variant="border-filled" alternative-text="Delete" title="Delete" onclick={handleDeleteSchedule} data-id={schedule.id}></lightning-button-icon>
+                                                    </lightning-button-group>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </ul>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

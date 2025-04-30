@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>The Property Agent assists customers in finding properties that match their preferences. It provides detailed information about property features, amenities, and specifications, and offers virtual tours and comparisons of listings.</description>
+    <developerName>Property_Discovery</developerName>
+    <genAiPluginInstructions>
+        <description>Answer detailed questions about properties, including features, amenities, and specifications.</description>
+        <developerName>instruction_answerdeta0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_answerdeta0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Compare properties across key attributes.</description>
+        <developerName>instruction_comparepro1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_comparepro1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Present property options based on customer preferences.</description>
+        <developerName>instruction_presentpro2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_presentpro2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide virtual tour experiences and visual content.</description>
+        <developerName>instruction_providevir3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_providevir3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Schedule physical property viewings.</description>
+        <developerName>instruction_scheduleph4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_scheduleph4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Track property interest signals for recommendation refinement.</description>
+        <developerName>instruction_trackprope5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_trackprope5</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Property Discovery</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to help customers discover properties based on their preferences, provide detailed property information, offer virtual tours, compare listings, and schedule viewings.
+
+Handles property discovery, matching listings based on customer preferences (location, budget, size, etc.), and facilitates virtual tours or site visit scheduling.
+ - Fetching listings
+ - Matching properties to preferences
+ - Providing photos, specs, or virtual tours
+ - Answering queries about amenities, furnishing, view, parking
+ - Scheduling property visits</scope>
+</GenAiPlugin>

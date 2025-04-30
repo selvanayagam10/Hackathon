@@ -1,0 +1,312 @@
+<!-- voiceAgentChat.html -->
+<template>
+    <div class="voice-chat-container">
+        <!-- Header Section -->
+        <div class="chat-header">
+            <div class="agent-info">
+                <template if:true={selectedAgent}>
+                    <lightning-icon icon-name={agentIcon} size="small" class="slds-m-right_x-small"></lightning-icon>
+                    <h2 class="slds-text-heading_medium">Chat with {agentName}</h2>
+                </template>
+                <template if:false={selectedAgent}>
+                    <lightning-icon icon-name="standard:bot" size="small" class="slds-m-right_x-small"></lightning-icon>
+                    <h2 class="slds-text-heading_medium">AI Assistant</h2>
+                </template>
+            </div>
+            <div class="header-actions">
+  
+                <!-- Guided Help Button -->
+                <lightning-button-icon icon-name="utility:help" 
+                    variant="border-filled" 
+                    size="large"
+                    alternative-text="Guided Help" 
+                    title="Get Guided Help"
+                    class="icon-button guided-help-button">
+                </lightning-button-icon>
+
+                <!-- Clear Chat Button -->
+                <lightning-button-icon icon-name="utility:end_chat" 
+                    variant="border-filled" 
+                    size="large"
+                    alternative-text="Clear Chat History" 
+                    title="Clear Chat History"
+                    onclick={clearChatConversation} 
+                    class="icon-button clear-chat-button">
+                </lightning-button-icon>
+
+                <lightning-button-icon icon-name={microphoneIcon} 
+                    variant={microphoneVariant}
+                    size="large"
+                    alternative-text={microphoneLabel} 
+                    title={microphoneLabel} 
+                    onclick={toggleMicrophone} 
+                    class="icon-button mic-button">
+                </lightning-button-icon>
+
+                <lightning-button-icon icon-name={soundIcon} 
+                    variant="border-filled"
+                    size="large"
+                    alternative-text={soundLabel} 
+                    title={soundLabel} 
+                    onclick={toggleSound} 
+                    class="icon-button sound-button">
+                </lightning-button-icon>
+            </div>
+        </div>
+
+        <!-- AI Capabilities Modal (conditionally rendered) -->
+        <div if:true={showCapabilities} class="capabilities-modal">
+            <div class="capabilities-content">
+                <div class="capabilities-header">
+                    <h2>AI Assistant Capabilities</h2>
+                    <lightning-button-icon icon-name="utility:close"
+                        variant="bare"
+                        size="small"
+                        alternative-text="Close"
+                        title="Close"
+                        onclick={hideAICapabilities}
+                        class="close-capabilities">
+                    </lightning-button-icon>
+                </div>
+                <div class="capabilities-body">
+                    <h3>This AI assistant can:</h3>
+                    <ul>
+                        <li>Answer questions about real estate</li>
+                        <li>Provide market analysis and property insights</li>
+                        <li>Help with general inquiries related to your account</li>
+                        <li>Offer guidance on real estate processes</li>
+                    </ul>
+                    <h3>Limitations:</h3>
+                    <ul>
+                        <li>Cannot perform transactions on your behalf</li>
+                        <li>May not have access to the most recent market data</li>
+                        <li>Cannot schedule appointments directly with agents</li>
+                        <li>Will not have access to your personal financial information</li>
+                    </ul>
+                    <div class="capabilities-note">
+                        <p>All interactions with this AI are recorded to improve service quality. You remain in control of any actions suggested by the AI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages Container -->
+        <div class="messages-container">
+            <template for:each={messages} for:item="message">
+                <div key={message.id} class={message.containerClass}>
+                    <div class="avatar-container">
+                        <template if:true={message.isAgent}>
+                            <div class="agent-avatar">
+                                <lightning-icon icon-name="standard:bot" size="small"></lightning-icon>
+                                <div class="ai-badge" title="AI-generated response">AI</div>
+                            </div>
+                        </template>
+                        <template if:false={message.isAgent}>
+                            <div class="user-avatar">
+                                <lightning-icon icon-name="standard:user" size="small"></lightning-icon>
+                            </div>
+                        </template>
+                    </div>
+                    <div class={message.contentClass}>
+                        <div class="message-header">
+                            <div class="message-author">{message.author}</div>
+                            <div class="message-actions">
+                                <lightning-button-icon
+                                    icon-name="utility:copy"
+                                    variant="bare"
+                                    size="medium"
+                                    alternative-text="Copy"
+                                    title="Copy message"
+                                    onclick={handleCopy}
+                                    data-id={message.id}>                                
+                                </lightning-button-icon>
+                                <lightning-button-icon
+                                    icon-name="utility:volume_high"
+                                    variant="bare"
+                                    size="medium"
+                                    alternative-text="Speak"
+                                    title="Speak message"
+                                    onclick={playMessage}
+                                    data-id={message.id}>
+                                </lightning-button-icon>
+
+                                <template if:true={message.isAgent}>
+                                    <lightning-button-icon icon-name="utility:like" 
+                                        variant="bare" size="medium" 
+                                        alternative-text="Like" title="This was helpful" 
+                                        onclick={handleLike} data-id={message.id}></lightning-button-icon>
+                                    <lightning-button-icon icon-name="utility:dislike" 
+                                        variant="bare" size="medium" 
+                                        alternative-text="Dislike" title="This was not helpful" 
+                                        onclick={handleDislike} data-id={message.id}></lightning-button-icon>
+                                    <lightning-button-icon icon-name="utility:refresh" 
+                                        variant="bare" size="medium" 
+                                        alternative-text="Regenerate" title="Ask AI to try again" 
+                                        onclick={handleRegenerate} data-id={message.id}></lightning-button-icon>
+                                </template>
+                            </div>
+                        </div>
+                        <div class="message-text">{message.text}</div>
+                        <template if:true={message.isAgent}>
+                            <div if:true={message.showFeedbackForm} class="feedback-form">
+                                <div class="feedback-header">Help us improve</div>
+                                <div class="feedback-question">What was wrong with this response?</div>
+                                <div class="feedback-options">
+                                    <div class="feedback-option" onclick={handleFeedbackOption} data-option="inaccurate" data-id={message.id}>
+                                        <span>Inaccurate information</span>
+                                    </div>
+                                    <div class="feedback-option" onclick={handleFeedbackOption} data-option="unhelpful" data-id={message.id}>
+                                        <span>Not helpful</span>
+                                    </div>
+                                    <div class="feedback-option" onclick={handleFeedbackOption} data-option="confusing" data-id={message.id}>
+                                        <span>Confusing or unclear</span>
+                                    </div>
+                                    <div class="feedback-option" onclick={handleFeedbackOption} data-option="other" data-id={message.id}>
+                                        <span>Other issue</span>
+                                    </div>
+                                </div>
+                                <div class="feedback-actions">
+                                    <lightning-button variant="neutral" label="Cancel" onclick={hideFeedbackForm} data-id={message.id}></lightning-button>
+                                    <lightning-button variant="brand" label="Submit" onclick={submitFeedback} data-id={message.id}></lightning-button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+            <div if:true={isTyping} class="typing-indicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-container">
+            <lightning-textarea
+                value={inputMessage}
+                onchange={handleInputChange}
+                onkeydown={handleKeyDown}
+                placeholder="Type your message here..."
+                class="message-input">
+            </lightning-textarea>
+
+            <div class="input-controls">
+                <div class="left-buttons">
+                    <!-- High Contrast Toggle -->
+                    <lightning-button-icon
+                        icon-name="utility:toggle"
+                        variant="border-filled"
+                        size="large"
+                        alternative-text="Toggle High Contrast"
+                        title="Toggle High Contrast"
+                        onclick={toggleHighContrast}
+                        class="icon-button">
+                    </lightning-button-icon>
+
+                    <!-- Emoji Button with Picker -->
+                    <div class="emoji-button-container">
+                        <lightning-button-icon
+                            icon-name="utility:emoji"
+                            variant="border-filled"
+                            size="large"
+                            alternative-text="Add Emoji"
+                            title="Add Emoji"
+                            onclick={toggleEmojiPicker}
+                            class="icon-button">
+                        </lightning-button-icon>
+                        
+                        <!-- Emoji Picker positioned above the button -->
+                        <div if:true={showEmojiPicker} class="emoji-picker">
+                            <template for:each={emojiCategories} for:item="category">
+                                <div key={category.name} class="emoji-category">
+                                    <h4>{category.name}</h4>
+                                    <div class="emoji-list">
+                                        <template for:each={category.emojis} for:item="emoji">
+                                            <span key={emoji.code} onclick={handleEmojiSelect} data-emoji={emoji.symbol} class="emoji-item">
+                                                {emoji.symbol}
+                                            </span>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="file-upload-container">
+                        <input type="file" accept="*/*" onchange={handleFileUpload} class="file-input" style="display: none;" />
+                        <lightning-button-icon
+                            icon-name="utility:upload"
+                            variant="border-filled"
+                            size="small"
+                            alternative-text="Upload File"
+                            title="Upload File"
+                            onclick={handleFileButtonClick}
+                            class="icon-button upload-button">
+                        </lightning-button-icon>
+                    </div>
+                </div>
+
+                <div class="right-buttons">
+                    <!-- Clear Text -->
+                    <lightning-button-icon
+                        icon-name="utility:clear"
+                        variant="border-filled"
+                        size="small"
+                        alternative-text="Clear Text"
+                        title="Clear Text"
+                        onclick={clearTextInput}
+                        class="icon-button clear-button">
+                    </lightning-button-icon>
+                    
+                    <lightning-button-icon icon-name={microphoneIcon} variant={microphoneVariant}
+                    alternative-text={microphoneLabel} title={microphoneLabel} 
+                    onclick={toggleMicrophone} class="mic-button"></lightning-button-icon>
+
+                    <lightning-button-icon icon-name={soundIcon} variant="border-filled"
+                    alternative-text={soundLabel} title={soundLabel} 
+                    onclick={toggleSound} class="sound-button"></lightning-button-icon>
+
+                    <!-- Send Button -->
+                    <lightning-button-icon
+                        icon-name="utility:send"
+                        variant="brand"
+                        alternative-text="Send"
+                        title="Send"
+                        onclick={handleSend}
+                        class="send-button"
+                        disabled={isSendDisabled}>
+                    </lightning-button-icon>
+                </div>
+            </div>
+
+            <!-- Uploaded Files Display -->
+            <div class="uploaded-files horizontal-files">
+                <template for:each={uploadedFiles} for:item="file">
+                    <div key={file.name} class="uploaded-file">
+                        <span class="file-info">
+                            <span class="file-name">{file.name}</span>
+                            <lightning-button-icon
+                                icon-name="utility:close"
+                                alternative-text="Remove"
+                                title="Remove"
+                                onclick={removeFile}
+                                data-file-name={file.name}
+                                size="x-small"
+                                class="remove-button no-border">
+                            </lightning-button-icon>
+                        </span>
+                    </div>
+                </template>
+            </div>
+            
+            <!-- AI Privacy Notice -->
+            <div class="ai-privacy-notice">
+                <lightning-icon icon-name="utility:info" size="x-small"></lightning-icon>
+                <span>AI responses are generated based on your inputs. You retain control of all actions.</span>
+                <a href="javascript:void(0)" onclick={showPrivacyDetails}>Learn more</a>
+            </div>
+        </div>
+    </div>
+</template>

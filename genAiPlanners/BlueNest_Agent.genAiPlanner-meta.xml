@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>BlueNest is a smart, AI-powered real estate assistant developed by Demandblue for DB Properties. It delivers a seamless and personalized experience across residential, retail, and commercial property inquiries. Whether a customer is searching for a 2-bedroom sea-view apartment in Marina, a prime retail unit in Downtown, or a large corporate office in DIFC, BlueNest intelligently captures requirements, qualifies leads, and presents matching options instantly. It offers features like virtual tours, appointment scheduling, amenity-based filtering, and location-specific recommendations. BlueNest maintains context throughout the conversation and ensures a smooth transition to property agents for viewings and transactions. It’s available 24/7 to guide prospects through their real estate journey—from discovery to site visits—enhancing lead conversion and client satisfaction.</description>
+    <genAiFunctions>
+        <genAiFunctionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</genAiFunctionName>
+    </genAiFunctions>
+    <genAiPlugins>
+        <genAiPluginName>Real_Estate_Management</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiCustomizedPlugin>
+            <description>Handles customer inquiries and actions related to support cases, including providing case information, updating existing cases, and creating new cases.</description>
+            <genAiFunctions>
+                <functionName>SvcCopilotTmpl__AddCaseComment</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>Create_a_case_record</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>SvcCopilotTmpl__GetAllCasesForContact</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>Get_Case_By_Case_Number</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>SvcCopilotTmpl__IdentifyCustomerByEmail</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>Sales__IdentifyKeyContacts</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>Sales__SendMeetingRequest</functionName>
+            </genAiFunctions>
+            <genAiPluginInstructions>
+                <description>Always format any dates in a human readable format</description>
+                <developerName>instruction_alwaysform0</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_alwaysform0</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Do not ever show the Case Id to a customer</description>
+                <developerName>instruction_donotevers1</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_donotevers1</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>If the customer is not known, always ask for their email address and get their Contact record before running any other actions.</description>
+                <developerName>instruction_ifthecusto2</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_ifthecusto2</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>When adding a comment to a case, first retrieve the case details using the case number, ask the user for the exact comment they would like to add and only then add it.</description>
+                <developerName>instruction_whenadding3</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_whenadding3</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>When sharing case details to the customer, show the following properties as an itemized list :Case number, Subject, Description, and Status.</description>
+                <developerName>instruction_whensharin4</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_whensharin4</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>A case is a record used to help track a customer&apos;s issues. Customers may have questions about the status of the issue or want to provide more information for the case. Cases are usually associated with a contact. Comments are added to provide new information.</description>
+                <developerName>instruction_acaseisare5</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_acaseisare5</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Use the Answer Questions with Knowledge action to answer troubleshooting questions.</description>
+                <developerName>instruction_usetheansw6</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_usetheansw6</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Acknowledge and validate user concerns with empathy and professionalism.</description>
+                <developerName>instruction_acknowledg7</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_acknowledg7</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>When a customer asks you to create a case, please summarize the current conversation. The subject should be less than 7 words and function as a high level overview of what the customer inquired about. The description should be no more than 3 sentences and should provide more depth about what exactly the customer asked, important data, and any other relevant information to help a customer service representative understand the context of this conversation.</description>
+                <developerName>instruction_whenacusto8</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_whenacusto8</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Get the Case Subject and Description inputs from the user</description>
+                <developerName>instruction_getthecase9</developerName>
+                <language xsi:nil="true"/>
+                <masterLabel>instruction_getthecase9</masterLabel>
+            </genAiPluginInstructions>
+            <language>en_US</language>
+            <masterLabel>Case Management</masterLabel>
+            <name>CaseManagement</name>
+            <pluginType>Topic</pluginType>
+            <scope>Your job is to help customers retrieve case information, update case comments, and create new cases based on customer requests.</scope>
+        </genAiCustomizedPlugin>
+        <genAiPluginName>SvcCopilotTmpl__CaseManagement</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>BlueNest Agent</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlanner>

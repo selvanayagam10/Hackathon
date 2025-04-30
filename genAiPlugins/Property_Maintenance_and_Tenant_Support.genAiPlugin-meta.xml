@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Handles property maintenance and tenant support needs post move-in, including plumbing, electrical, pest control, or general repairs.</description>
+    <developerName>Property_Maintenance_and_Tenant_Support</developerName>
+    <genAiPluginInstructions>
+        <description>Assign service requests to appropriate technicians or vendors.</description>
+        <developerName>instruction_assignserv0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_assignserv0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Collect feedback from tenants post-service to assess satisfaction.</description>
+        <developerName>instruction_collectfee1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_collectfee1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Escalate unresolved issues to higher authorities as needed.</description>
+        <developerName>instruction_escalateun2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_escalateun2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Log all service requests with detailed issue descriptions.</description>
+        <developerName>instruction_logallserv3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_logallserv3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide regular status updates on ongoing repair jobs.</description>
+        <developerName>instruction_providereg4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_providereg4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Property Maintenance and Tenant Support</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Logging service requests. Auto-assigning to technicians/vendors. Status updates on repair jobs. Escalation handling. Collecting post-service feedback.
+
+Handles property maintenance and tenant support needs post move-in, including plumbing, electrical, pest control, or general repairs.
+ - Logging service requests
+ - Auto-assigning to technicians/vendors
+ - Status updates on repair jobs
+ - Escalation handling
+ - Collecting post-service feedback</scope>
+</GenAiPlugin>

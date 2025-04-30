@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic involves determining the eligibility or suitability of a customer for a particular service or product. It includes gathering necessary information and assessing customer needs. The leads are qualified only after the customer booked a site visit. Do not qualify a lead unless the customer booked a site visit.</description>
+    <developerName>Customer_Qualification</developerName>
+    <genAiPluginInstructions>
+        <description>Ask the customer for relevant information to determine their eligibility.</description>
+        <developerName>instruction_askthecust0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askthecust0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Based on the customer&apos;s responses, assess their suitability for the service or product.</description>
+        <developerName>instruction_basedonthe1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_basedonthe1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Collect qualification data, including budget, timeline, and location preferences</description>
+        <developerName>instruction_collectqua2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_collectqua2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer does not provide sufficient information, ask clarifying questions.</description>
+        <developerName>instruction_ifthecusto3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifthecusto3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer is not qualified, provide alternative options or escalate to a human agent.</description>
+        <developerName>instruction_ifthecusto4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifthecusto4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Maintain conversation history and context for seamless handoffs</description>
+        <developerName>instruction_maintainco5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_maintainco5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Route qualified leads to appropriate specialized agents</description>
+        <developerName>instruction_routequali6</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_routequali6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Score leads based on qualification criteria and engagement signals</description>
+        <developerName>instruction_scoreleads7</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_scoreleads7</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Customer Qualification</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to qualify customers by collecting the required information and assessing their needs. You must not handle order processing, account issues, or general inquiries. Do not qualify lead unless customer booked for site visit.</scope>
+</GenAiPlugin>

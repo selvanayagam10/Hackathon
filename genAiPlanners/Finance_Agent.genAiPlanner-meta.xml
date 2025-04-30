@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The Finance Agent manages the financial dimension of the real estate journey, assisting customers from pre-qualification to investment decision-making. It evaluates financial readiness by analyzing income and debt data to determine affordability and presents tailored mortgage options with payment breakdowns. The agent connects customers to trusted lending partners, facilitates secure deposit and payment transactions, and generates all necessary financial documentation for compliance and transparency. For investment-minded clients, it provides a detailed analysis on property return potential and long-term financial viability. By integrating seamlessly with transaction workflows, the Finance Agent ensures accurate, real-time financial guidance, helping customers make informed and confident decisions at every step of the property buying process.</description>
+    <genAiFunctions>
+        <genAiFunctionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</genAiFunctionName>
+    </genAiFunctions>
+    <genAiPlugins>
+        <genAiPluginName>Financial_Guidance_Processing</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Investor_Insights_ROI_Calculator</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>Finance Agent</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlanner>

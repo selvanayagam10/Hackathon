@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Manages the transaction process including offers, contracts, document collection, and closing coordination.</description>
+    <developerName>Deal_Processing_Documentation</developerName>
+    <genAiPluginInstructions>
+        <description>Coordinate with third parties (attorneys, inspectors, etc.).</description>
+        <developerName>instruction_coordinate0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_coordinate0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Facilitate closing process and final documentation.</description>
+        <developerName>instruction_facilitate1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_facilitate1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Generate and manage transaction documents.</description>
+        <developerName>instruction_generatean2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_generatean2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Guide customers through offer submission process.</description>
+        <developerName>instruction_guidecusto3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_guidecusto3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide status updates to all stakeholders.</description>
+        <developerName>instruction_providesta4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_providesta4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Track transaction milestones and deadlines.</description>
+        <developerName>instruction_tracktrans5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_tracktrans5</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Deal Processing &amp; Documentation</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to guide customers through the offer submission process, generate and manage transaction documents, track transaction milestones and deadlines, coordinate with third parties (attorneys, inspectors, etc.), provide status updates to all stakeholders, and facilitate the closing process and final documentation.
+
+Manages deal progression from opportunity to contract. Covers negotiations, document collection, agreement signing, and payment coordination.
+ - Opportunity and deal tracking
+ - Price negotiation and offer management
+ - Sharing legal documents
+ - Agreement drafting &amp; e-signature flow
+ - Status updates on deal stages</scope>
+</GenAiPlugin>

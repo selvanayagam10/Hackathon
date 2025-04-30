@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The Transaction Agent oversees the full lifecycle of real estate transactions, ensuring a smooth and transparent process from offer to closing. It assists customers in preparing and submitting formal offers, manages all required documentation, and keeps track of critical transaction milestones and deadlines. Acting as the coordination hub, the agent interfaces with third-party stakeholders such as attorneys, inspectors, and escrow agents to align activities and avoid delays. It delivers real-time status updates to buyers, sellers, and internal teams, ensuring everyone stays informed. With the ability to manage transaction timelines and facilitate closing logistics, the agent ensures every deal is handled efficiently and accurately. By leveraging intelligent automation, it reduces administrative overhead while maintaining compliance and customer satisfaction.</description>
+    <genAiFunctions>
+        <genAiFunctionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</genAiFunctionName>
+    </genAiFunctions>
+    <genAiPlugins>
+        <genAiPluginName>Deal_Processing_Documentation</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>Transaction Agent</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlanner>

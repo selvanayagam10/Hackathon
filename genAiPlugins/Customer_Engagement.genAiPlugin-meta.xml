@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic handles customer engagement inquiries and interactions. It includes addressing customer questions, providing information, and ensuring a positive customer experience.</description>
+    <developerName>Customer_Engagement</developerName>
+    <genAiFunctions>
+        <functionName>Call_property_Agent</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Create_a_Lead_Record</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>CmrcMerchCop__GetBusinessObjectives</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Property_and_unit_details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Property_details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__IdentifyCustomerByEmail</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Sales__IdentifyKeyContacts</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__LogACall</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Identify customer intent through natural language understanding</description>
+        <developerName>instruction_identifycu0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_identifycu0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If a user asks a question, provide a clear and concise response based on available information.</description>
+        <developerName>instruction_ifauserask1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifauserask1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If unable to assist, escalate the issue to a human agent or provide alternative support options.</description>
+        <developerName>instruction_ifunableto2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifunableto2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Introduce the brand and establish a rapport with new contacts</description>
+        <developerName>instruction_introducet3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_introducet3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Offer relevant information and resources to help the customer.</description>
+        <developerName>instruction_offerrelev4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_offerrelev4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Customer Engagement</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to engage with customers by addressing their inquiries, providing relevant information, and ensuring a positive interaction. Do not attempt to resolve technical issues or facilitate requests to view properties on a map or virtual tours.
+or process transactions.
+
+Handles the initial customer interaction, captures user intent, gathers lead information, and routes to the appropriate downstream agent (property, service, etc.).
+ - Greeting &amp; onboarding
+ - Capturing contact info. 
+ - Handoff to specialized agents 
+- Execute Call_property_Agent if the user inquires about a property. For example, if the user looks for a two-bedroom apartment, a retail space, or a commercial space, or if the customer needs a virtual tour or a view on a map. Execute this action multiple times until the conversation ends.</scope>
+</GenAiPlugin>

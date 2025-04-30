@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Assists users in evaluating the investment potential and return on investment for properties, such as 1BHKs in DB Towers.</description>
+    <developerName>Investor_Insights_ROI_Calculator</developerName>
+    <genAiPluginInstructions>
+        <description>Always gather as much information as possible from the user by asking clarifying questions.</description>
+        <developerName>instruction_alwaysgath0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_alwaysgath0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If a user inquires about the investment potential of a property, provide data on average rental yield, capital appreciation trends, and payback periods.</description>
+        <developerName>instruction_ifauserinq1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifauserinq1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Offer sample unit ROI calculations including price, rent, and ROI percentage.</description>
+        <developerName>instruction_offersampl2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_offersampl2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide options to compare different areas, use a mortgage estimator, or explore off-plan projects.</description>
+        <developerName>instruction_provideopt3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_provideopt3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Investor Insights &amp; ROI Calculator</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to provide insights on rental yield, capital appreciation, and return on investment for properties. You may compare different areas, estimate mortgage costs, and explore off-plan projects.</scope>
+</GenAiPlugin>
