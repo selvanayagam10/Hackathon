@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Room_Type__c</fullName>
+    <label>Room Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bedroom</fullName>
+                <default>false</default>
+                <label>Bedroom</label>
+            </value>
+            <value>
+                <fullName>Master Bedroom</fullName>
+                <default>false</default>
+                <label>Master Bedroom</label>
+            </value>
+            <value>
+                <fullName>Guest Bedroom</fullName>
+                <default>false</default>
+                <label>Guest Bedroom</label>
+            </value>
+            <value>
+                <fullName>Kids Bedroom</fullName>
+                <default>false</default>
+                <label>Kids Bedroom</label>
+            </value>
+            <value>
+                <fullName>Servant/Helper Room</fullName>
+                <default>false</default>
+                <label>Servant/Helper Room</label>
+            </value>
+            <value>
+                <fullName>Study Room / Home Office</fullName>
+                <default>false</default>
+                <label>Study Room / Home Office</label>
+            </value>
+            <value>
+                <fullName>Dressing Room / Walk-in Closet</fullName>
+                <default>false</default>
+                <label>Dressing Room / Walk-in Closet</label>
+            </value>
+            <value>
+                <fullName>Nursery</fullName>
+                <default>false</default>
+                <label>Nursery</label>
+            </value>
+            <value>
+                <fullName>Dorm Room (for rentals or student housing)</fullName>
+                <default>false</default>
+                <label>Dorm Room (for rentals or student housing)</label>
+            </value>
+            <value>
+                <fullName>Kitchen</fullName>
+                <default>false</default>
+                <label>Kitchen</label>
+            </value>
+            <value>
+                <fullName>Wet Kitchen / Dirty Kitchen (utility-style cooking)</fullName>
+                <default>false</default>
+                <label>Wet Kitchen / Dirty Kitchen (utility-style cooking)</label>
+            </value>
+            <value>
+                <fullName>Dry Kitchen (modular/prep area)</fullName>
+                <default>false</default>
+                <label>Dry Kitchen (modular/prep area)</label>
+            </value>
+            <value>
+                <fullName>Pantry</fullName>
+                <default>false</default>
+                <label>Pantry</label>
+            </value>
+            <value>
+                <fullName>Dining Room</fullName>
+                <default>false</default>
+                <label>Dining Room</label>
+            </value>
+            <value>
+                <fullName>Breakfast Nook</fullName>
+                <default>false</default>
+                <label>Breakfast Nook</label>
+            </value>
+            <value>
+                <fullName>Living Room</fullName>
+                <default>false</default>
+                <label>Living Room</label>
+            </value>
+            <value>
+                <fullName>Family Lounge</fullName>
+                <default>false</default>
+                <label>Family Lounge</label>
+            </value>
+            <value>
+                <fullName>Drawing Room / Formal Living</fullName>
+                <default>false</default>
+                <label>Drawing Room / Formal Living</label>
+            </value>
+            <value>
+                <fullName>Bathroom</fullName>
+                <default>false</default>
+                <label>Bathroom</label>
+            </value>
+            <value>
+                <fullName>Powder Room (half-bath)</fullName>
+                <default>false</default>
+                <label>Powder Room (half-bath)</label>
+            </value>
+            <value>
+                <fullName>Ensuite Bathroom</fullName>
+                <default>false</default>
+                <label>Ensuite Bathroom</label>
+            </value>
+            <value>
+                <fullName>Common Toilet</fullName>
+                <default>false</default>
+                <label>Common Toilet</label>
+            </value>
+            <value>
+                <fullName>Shower Room</fullName>
+                <default>false</default>
+                <label>Shower Room</label>
+            </value>
+            <value>
+                <fullName>Utility Room</fullName>
+                <default>false</default>
+                <label>Utility Room</label>
+            </value>
+            <value>
+                <fullName>Laundry Room</fullName>
+                <default>false</default>
+                <label>Laundry Room</label>
+            </value>
+            <value>
+                <fullName>Changing Room</fullName>
+                <default>false</default>
+                <label>Changing Room</label>
+            </value>
+            <value>
+                <fullName>Media Room / Home Theater</fullName>
+                <default>false</default>
+                <label>Media Room / Home Theater</label>
+            </value>
+            <value>
+                <fullName>Game Room</fullName>
+                <default>false</default>
+                <label>Game Room</label>
+            </value>
+            <value>
+                <fullName>Music Room</fullName>
+                <default>false</default>
+                <label>Music Room</label>
+            </value>
+            <value>
+                <fullName>Library</fullName>
+                <default>false</default>
+                <label>Library</label>
+            </value>
+            <value>
+                <fullName>Entertainment Lounge</fullName>
+                <default>false</default>
+                <label>Entertainment Lounge</label>
+            </value>
+            <value>
+                <fullName>Balcony</fullName>
+                <default>false</default>
+                <label>Balcony</label>
+            </value>
+            <value>
+                <fullName>Terrace</fullName>
+                <default>false</default>
+                <label>Terrace</label>
+            </value>
+            <value>
+                <fullName>Patio</fullName>
+                <default>false</default>
+                <label>Patio</label>
+            </value>
+            <value>
+                <fullName>Veranda</fullName>
+                <default>false</default>
+                <label>Veranda</label>
+            </value>
+            <value>
+                <fullName>Rooftop Garden</fullName>
+                <default>false</default>
+                <label>Rooftop Garden</label>
+            </value>
+            <value>
+                <fullName>Deck</fullName>
+                <default>false</default>
+                <label>Deck</label>
+            </value>
+            <value>
+                <fullName>Courtyard</fullName>
+                <default>false</default>
+                <label>Courtyard</label>
+            </value>
+            <value>
+                <fullName>Sunroom / Solarium</fullName>
+                <default>false</default>
+                <label>Sunroom / Solarium</label>
+            </value>
+            <value>
+                <fullName>Porch</fullName>
+                <default>false</default>
+                <label>Porch</label>
+            </value>
+            <value>
+                <fullName>Playroom</fullName>
+                <default>false</default>
+                <label>Playroom</label>
+            </value>
+            <value>
+                <fullName>Hobby Room</fullName>
+                <default>false</default>
+                <label>Hobby Room</label>
+            </value>
+            <value>
+                <fullName>Gym Room</fullName>
+                <default>false</default>
+                <label>Gym Room</label>
+            </value>
+            <value>
+                <fullName>Indoor Playground</fullName>
+                <default>false</default>
+                <label>Indoor Playground</label>
+            </value>
+            <value>
+                <fullName>Craft Room</fullName>
+                <default>false</default>
+                <label>Craft Room</label>
+            </value>
+            <value>
+                <fullName>Yoga Room</fullName>
+                <default>false</default>
+                <label>Yoga Room</label>
+            </value>
+            <value>
+                <fullName>Spa Room</fullName>
+                <default>false</default>
+                <label>Spa Room</label>
+            </value>
+            <value>
+                <fullName>Reception Area</fullName>
+                <default>false</default>
+                <label>Reception Area</label>
+            </value>
+            <value>
+                <fullName>Lobby</fullName>
+                <default>false</default>
+                <label>Lobby</label>
+            </value>
+            <value>
+                <fullName>Conference Room</fullName>
+                <default>false</default>
+                <label>Conference Room</label>
+            </value>
+            <value>
+                <fullName>Meeting Room</fullName>
+                <default>false</default>
+                <label>Meeting Room</label>
+            </value>
+            <value>
+                <fullName>Common Lounge</fullName>
+                <default>false</default>
+                <label>Common Lounge</label>
+            </value>
+            <value>
+                <fullName>Guest Suite / Guest Room</fullName>
+                <default>false</default>
+                <label>Guest Suite / Guest Room</label>
+            </value>
+            <value>
+                <fullName>Party Hall</fullName>
+                <default>false</default>
+                <label>Party Hall</label>
+            </value>
+            <value>
+                <fullName>Prayer Room</fullName>
+                <default>false</default>
+                <label>Prayer Room</label>
+            </value>
+            <value>
+                <fullName>Meditation Room</fullName>
+                <default>false</default>
+                <label>Meditation Room</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

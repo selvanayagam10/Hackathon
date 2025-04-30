@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mixed_Use</fullName>
+    <active>true</active>
+    <description>Mixed Use</description>
+    <label>Mixed Use</label>
+    <picklistValues>
+        <picklist>Amenities__c</picklist>
+        <values>
+            <fullName>Billiards Table</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Building Wi-Fi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clubhouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fitness Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Green Surrounding Neighborhood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Package Lockers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Party room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet-friendly spaces</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Playgrounds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social area or Rooftop garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surveillance cameras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swimming Pools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valet Trash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walking Paths</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Clubhouse_Amenities__c</picklist>
+        <values>
+            <fullName>Air Hockey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arcade Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Badminton Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billiards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board Games</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confined Kids Plaza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creche</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cricket Simulator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIY Toy Track</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dart Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment Lounge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foosball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guest Bedrooms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gym</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hookey Ring Toss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indoor Tree Plaza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interactive Cycle Rider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interactive Gym</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Camp In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Library</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Rock Climbing Wall With Ball Pit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lego Wall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mini Theatre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-Purpose Hall With Pre-Function Lounge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Party Terrace And Outdoor Dining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Terrace For Guest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RC Racing Track</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sky Cinemas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Squash Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steam%2C Sauna And Jacuzzi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Story Nook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Table Tennis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toddler Play Area</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unisex Salon And Spa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zumba%2FAerobics%2FYoga</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entertainment_Features__c</picklist>
+        <values>
+            <fullName>Air Pavilion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apollo Garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aqua Retreat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aquileia Park</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Augustine Of Hippo Statue Mound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bus And Shuttle Arrival</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campfire With Swing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Basilica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Citrus Plaza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corinth Canal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entrance Plaza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fountain Of Wealth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Garden Seating Patio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Giant Trampoline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grass Mound With Hammock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Herbs %26 Spices Garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hyacinth Garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Imperial Avenue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Labyrinth Garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leisure Pavilion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lush Green Wall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-Purpose Lawn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdoor Rainshower Plaza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdoor Seating Lawn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palm Mound Patio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pet Park</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Picnic Corner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rolling Mound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roman Bridge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shallow Pond With Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soul Garden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports Gallery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statue Of Hercules</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tethy%27s Pavilion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tethy%27s Picnic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tropical Forest With Elevated Walkway</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Exclusive_Sports_Courts__c</picklist>
+        <values>
+            <fullName>100 M Race Track</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adventure%2FRock Wall Climbing For Kids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Archery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Basketball Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beach Volleyball Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bicycle Track</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Box Cricket</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cabana Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chalkboard Wall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Changing Rooms %28M%2FF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cricket Practice Net</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dedicated Kids Pool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exclusive Sports Courts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floor Game Plaza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frisbee Trampoline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Futsal Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Giant Slingshot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hookey Ring Toss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Island Seating Area In The Pool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacuzzi%2FHydrotherapy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jungle Gym</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kho Kho Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Bike Park Rogla</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Play Area</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Roller Coaster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Trampoline Park</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Tunnel Mound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Zipline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LED Splash Pad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mini Golf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-Ring Basketball Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdoor Gym</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdoor Rain Shower</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdoor Yoga Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outdoor Yoga Lawn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pedaling Merry-Go-Round</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pool Deck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poolside Basketball Hoop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poolside Fresco Dining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poolside Lounge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poolside Theatre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rain Curtain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refreshment Corner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sandpit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shower Rooms %28M%2FF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skating%2FSkate Board Arena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soccer Cage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spa Hydraulic Water Massage Bed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tennis Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traditional Kabaddi Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volleyball Court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walking And Jogging Track</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facilities__c</picklist>
+        <values>
+            <fullName>ATM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bicycle Rack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cafeteria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Charging Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Car Wash Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convenio Store</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMS Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pantry %26 Kitchen With Party Hall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Storage Room</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Indoor_Amenities__c</picklist>
+        <values>
+            <fullName>Balcony</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central air conditioning and Heating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complimentary Wi-Fi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dishwasher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High-end Finishes and Fixtures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Large bathtubs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Rent Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security systems and intercom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washer and Dryer in-unit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Location_Highlights__c</picklist>
+        <values>
+            <fullName>Downtown%2FCity Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Near Office%2FTech Parks or Business Districts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Near Universities%2FColleges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Near the Metro%2FSubway Station</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Property_Type__c</picklist>
+        <values>
+            <fullName>Apartment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beach houses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bungalows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Factories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Farmhouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Land</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mixed Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile homes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office buildings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outlet centers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional mall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restaurants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Row Houses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strip center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Villa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouses</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready to Move</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Construction</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

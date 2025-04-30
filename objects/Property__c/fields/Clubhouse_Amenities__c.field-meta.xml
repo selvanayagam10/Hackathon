@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clubhouse_Amenities__c</fullName>
+    <label>Clubhouse Amenities</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mini Theatre</fullName>
+                <default>false</default>
+                <label>Mini Theatre</label>
+            </value>
+            <value>
+                <fullName>Multi-Purpose Hall With Pre-Function Lounge</fullName>
+                <default>false</default>
+                <label>Multi-Purpose Hall With Pre-Function Lounge</label>
+            </value>
+            <value>
+                <fullName>Steam, Sauna And Jacuzzi</fullName>
+                <default>false</default>
+                <label>Steam, Sauna And Jacuzzi</label>
+            </value>
+            <value>
+                <fullName>Unisex Salon And Spa</fullName>
+                <default>false</default>
+                <label>Unisex Salon And Spa</label>
+            </value>
+            <value>
+                <fullName>Sky Cinemas</fullName>
+                <default>false</default>
+                <label>Sky Cinemas</label>
+            </value>
+            <value>
+                <fullName>Learning Centre</fullName>
+                <default>false</default>
+                <label>Learning Centre</label>
+            </value>
+            <value>
+                <fullName>Business Centre</fullName>
+                <default>false</default>
+                <label>Business Centre</label>
+            </value>
+            <value>
+                <fullName>Conference Room</fullName>
+                <default>false</default>
+                <label>Conference Room</label>
+            </value>
+            <value>
+                <fullName>Entertainment Lounge</fullName>
+                <default>false</default>
+                <label>Entertainment Lounge</label>
+            </value>
+            <value>
+                <fullName>Party Terrace And Outdoor Dining</fullName>
+                <default>false</default>
+                <label>Party Terrace And Outdoor Dining</label>
+            </value>
+            <value>
+                <fullName>Guest Bedrooms</fullName>
+                <default>false</default>
+                <label>Guest Bedrooms</label>
+            </value>
+            <value>
+                <fullName>Private Terrace For Guest</fullName>
+                <default>false</default>
+                <label>Private Terrace For Guest</label>
+            </value>
+            <value>
+                <fullName>Arcade Room</fullName>
+                <default>false</default>
+                <label>Arcade Room</label>
+            </value>
+            <value>
+                <fullName>Billiards</fullName>
+                <default>false</default>
+                <label>Billiards</label>
+            </value>
+            <value>
+                <fullName>Board Games</fullName>
+                <default>false</default>
+                <label>Board Games</label>
+            </value>
+            <value>
+                <fullName>Table Tennis</fullName>
+                <default>false</default>
+                <label>Table Tennis</label>
+            </value>
+            <value>
+                <fullName>Hookey Ring Toss</fullName>
+                <default>false</default>
+                <label>Hookey Ring Toss</label>
+            </value>
+            <value>
+                <fullName>Air Hockey</fullName>
+                <default>false</default>
+                <label>Air Hockey</label>
+            </value>
+            <value>
+                <fullName>Dart Board</fullName>
+                <default>false</default>
+                <label>Dart Board</label>
+            </value>
+            <value>
+                <fullName>Foosball</fullName>
+                <default>false</default>
+                <label>Foosball</label>
+            </value>
+            <value>
+                <fullName>Squash Court</fullName>
+                <default>false</default>
+                <label>Squash Court</label>
+            </value>
+            <value>
+                <fullName>Badminton Court</fullName>
+                <default>false</default>
+                <label>Badminton Court</label>
+            </value>
+            <value>
+                <fullName>Cricket Simulator</fullName>
+                <default>false</default>
+                <label>Cricket Simulator</label>
+            </value>
+            <value>
+                <fullName>Zumba/Aerobics/Yoga</fullName>
+                <default>false</default>
+                <label>Zumba/Aerobics/Yoga</label>
+            </value>
+            <value>
+                <fullName>Interactive Gym</fullName>
+                <default>false</default>
+                <label>Interactive Gym</label>
+            </value>
+            <value>
+                <fullName>Gym</fullName>
+                <default>false</default>
+                <label>Gym</label>
+            </value>
+            <value>
+                <fullName>Creche</fullName>
+                <default>false</default>
+                <label>Creche</label>
+            </value>
+            <value>
+                <fullName>Kids Library</fullName>
+                <default>false</default>
+                <label>Kids Library</label>
+            </value>
+            <value>
+                <fullName>Confined Kids Plaza</fullName>
+                <default>false</default>
+                <label>Confined Kids Plaza</label>
+            </value>
+            <value>
+                <fullName>Kids Rock Climbing Wall With Ball Pit</fullName>
+                <default>false</default>
+                <label>Kids Rock Climbing Wall With Ball Pit</label>
+            </value>
+            <value>
+                <fullName>Toddler Play Area</fullName>
+                <default>false</default>
+                <label>Toddler Play Area</label>
+            </value>
+            <value>
+                <fullName>DIY Toy Track</fullName>
+                <default>false</default>
+                <label>DIY Toy Track</label>
+            </value>
+            <value>
+                <fullName>Indoor Tree Plaza</fullName>
+                <default>false</default>
+                <label>Indoor Tree Plaza</label>
+            </value>
+            <value>
+                <fullName>Lego Wall</fullName>
+                <default>false</default>
+                <label>Lego Wall</label>
+            </value>
+            <value>
+                <fullName>Kids Camp In</fullName>
+                <default>false</default>
+                <label>Kids Camp In</label>
+            </value>
+            <value>
+                <fullName>RC Racing Track</fullName>
+                <default>false</default>
+                <label>RC Racing Track</label>
+            </value>
+            <value>
+                <fullName>Story Nook</fullName>
+                <default>false</default>
+                <label>Story Nook</label>
+            </value>
+            <value>
+                <fullName>Interactive Cycle Rider</fullName>
+                <default>false</default>
+                <label>Interactive Cycle Rider</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

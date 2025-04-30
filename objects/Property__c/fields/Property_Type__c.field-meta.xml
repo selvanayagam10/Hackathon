@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Type__c</fullName>
+    <label>Property Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mixed Use</fullName>
+                <default>false</default>
+                <label>Mixed Use</label>
+            </value>
+            <value>
+                <fullName>Apartment</fullName>
+                <default>false</default>
+                <label>Apartment</label>
+            </value>
+            <value>
+                <fullName>Flats</fullName>
+                <default>false</default>
+                <label>Flats</label>
+            </value>
+            <value>
+                <fullName>Individual House</fullName>
+                <default>false</default>
+                <label>Individual House</label>
+            </value>
+            <value>
+                <fullName>Villa</fullName>
+                <default>false</default>
+                <label>Villa</label>
+            </value>
+            <value>
+                <fullName>Duplex</fullName>
+                <default>false</default>
+                <label>Duplex</label>
+            </value>
+            <value>
+                <fullName>Bungalows</fullName>
+                <default>false</default>
+                <label>Bungalows</label>
+            </value>
+            <value>
+                <fullName>Farmhouse</fullName>
+                <default>false</default>
+                <label>Farmhouse</label>
+            </value>
+            <value>
+                <fullName>Beach houses</fullName>
+                <default>false</default>
+                <label>Beach houses</label>
+            </value>
+            <value>
+                <fullName>Mobile homes</fullName>
+                <default>false</default>
+                <label>Mobile homes</label>
+            </value>
+            <value>
+                <fullName>Row Houses</fullName>
+                <default>false</default>
+                <label>Row Houses</label>
+            </value>
+            <value>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+                <label>Industrial</label>
+            </value>
+            <value>
+                <fullName>Office buildings</fullName>
+                <default>false</default>
+                <label>Office buildings</label>
+            </value>
+            <value>
+                <fullName>Hotels</fullName>
+                <default>false</default>
+                <label>Hotels</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>Warehouses</fullName>
+                <default>false</default>
+                <label>Warehouses</label>
+            </value>
+            <value>
+                <fullName>Factories</fullName>
+                <default>false</default>
+                <label>Factories</label>
+            </value>
+            <value>
+                <fullName>Regional mall</fullName>
+                <default>false</default>
+                <label>Regional mall</label>
+            </value>
+            <value>
+                <fullName>Strip center</fullName>
+                <default>false</default>
+                <label>Strip center</label>
+            </value>
+            <value>
+                <fullName>Outlet centers</fullName>
+                <default>false</default>
+                <label>Outlet centers</label>
+            </value>
+            <value>
+                <fullName>Power Center</fullName>
+                <default>false</default>
+                <label>Power Center</label>
+            </value>
+            <value>
+                <fullName>Restaurants</fullName>
+                <default>false</default>
+                <label>Restaurants</label>
+            </value>
+            <value>
+                <fullName>Land</fullName>
+                <default>false</default>
+                <label>Land</label>
+            </value>
+            <value>
+                <fullName>Plot</fullName>
+                <default>false</default>
+                <label>Plot</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

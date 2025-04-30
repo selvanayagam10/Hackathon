@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exclusive_Sports_Courts__c</fullName>
+    <label>Exclusive Sports Courts</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Exclusive Sports Courts</fullName>
+                <default>false</default>
+                <label>Exclusive Sports Courts</label>
+            </value>
+            <value>
+                <fullName>Basketball Court</fullName>
+                <default>false</default>
+                <label>Basketball Court</label>
+            </value>
+            <value>
+                <fullName>Kho Kho Court</fullName>
+                <default>false</default>
+                <label>Kho Kho Court</label>
+            </value>
+            <value>
+                <fullName>Traditional Kabaddi Court</fullName>
+                <default>false</default>
+                <label>Traditional Kabaddi Court</label>
+            </value>
+            <value>
+                <fullName>Tennis Court</fullName>
+                <default>false</default>
+                <label>Tennis Court</label>
+            </value>
+            <value>
+                <fullName>Beach Volleyball Court</fullName>
+                <default>false</default>
+                <label>Beach Volleyball Court</label>
+            </value>
+            <value>
+                <fullName>Volleyball Court</fullName>
+                <default>false</default>
+                <label>Volleyball Court</label>
+            </value>
+            <value>
+                <fullName>Futsal Court</fullName>
+                <default>false</default>
+                <label>Futsal Court</label>
+            </value>
+            <value>
+                <fullName>100 M Race Track</fullName>
+                <default>false</default>
+                <label>100 M Race Track</label>
+            </value>
+            <value>
+                <fullName>Soccer Cage</fullName>
+                <default>false</default>
+                <label>Soccer Cage</label>
+            </value>
+            <value>
+                <fullName>Walking And Jogging Track</fullName>
+                <default>false</default>
+                <label>Walking And Jogging Track</label>
+            </value>
+            <value>
+                <fullName>Box Cricket</fullName>
+                <default>false</default>
+                <label>Box Cricket</label>
+            </value>
+            <value>
+                <fullName>Cricket Practice Net</fullName>
+                <default>false</default>
+                <label>Cricket Practice Net</label>
+            </value>
+            <value>
+                <fullName>Bicycle Track</fullName>
+                <default>false</default>
+                <label>Bicycle Track</label>
+            </value>
+            <value>
+                <fullName>Archery</fullName>
+                <default>false</default>
+                <label>Archery</label>
+            </value>
+            <value>
+                <fullName>Multi-Ring Basketball Court</fullName>
+                <default>false</default>
+                <label>Multi-Ring Basketball Court</label>
+            </value>
+            <value>
+                <fullName>Skating/Skate Board Arena</fullName>
+                <default>false</default>
+                <label>Skating/Skate Board Arena</label>
+            </value>
+            <value>
+                <fullName>Outdoor Gym</fullName>
+                <default>false</default>
+                <label>Outdoor Gym</label>
+            </value>
+            <value>
+                <fullName>Outdoor Yoga Lawn</fullName>
+                <default>false</default>
+                <label>Outdoor Yoga Lawn</label>
+            </value>
+            <value>
+                <fullName>Outdoor Yoga Deck</fullName>
+                <default>false</default>
+                <label>Outdoor Yoga Deck</label>
+            </value>
+            <value>
+                <fullName>Kids Play Area</fullName>
+                <default>false</default>
+                <label>Kids Play Area</label>
+            </value>
+            <value>
+                <fullName>Floor Game Plaza</fullName>
+                <default>false</default>
+                <label>Floor Game Plaza</label>
+            </value>
+            <value>
+                <fullName>Jungle Gym</fullName>
+                <default>false</default>
+                <label>Jungle Gym</label>
+            </value>
+            <value>
+                <fullName>Adventure/Rock Wall Climbing For Kids</fullName>
+                <default>false</default>
+                <label>Adventure/Rock Wall Climbing For Kids</label>
+            </value>
+            <value>
+                <fullName>Chalkboard Wall</fullName>
+                <default>false</default>
+                <label>Chalkboard Wall</label>
+            </value>
+            <value>
+                <fullName>Hookey Ring Toss</fullName>
+                <default>false</default>
+                <label>Hookey Ring Toss</label>
+            </value>
+            <value>
+                <fullName>Mini Golf</fullName>
+                <default>false</default>
+                <label>Mini Golf</label>
+            </value>
+            <value>
+                <fullName>Giant Slingshot</fullName>
+                <default>false</default>
+                <label>Giant Slingshot</label>
+            </value>
+            <value>
+                <fullName>Sandpit</fullName>
+                <default>false</default>
+                <label>Sandpit</label>
+            </value>
+            <value>
+                <fullName>Kids Trampoline Park</fullName>
+                <default>false</default>
+                <label>Kids Trampoline Park</label>
+            </value>
+            <value>
+                <fullName>Kids Tunnel Mound</fullName>
+                <default>false</default>
+                <label>Kids Tunnel Mound</label>
+            </value>
+            <value>
+                <fullName>Kids Zipline</fullName>
+                <default>false</default>
+                <label>Kids Zipline</label>
+            </value>
+            <value>
+                <fullName>Kids Bike Park Rogla</fullName>
+                <default>false</default>
+                <label>Kids Bike Park Rogla</label>
+            </value>
+            <value>
+                <fullName>Frisbee Trampoline</fullName>
+                <default>false</default>
+                <label>Frisbee Trampoline</label>
+            </value>
+            <value>
+                <fullName>Kids Roller Coaster</fullName>
+                <default>false</default>
+                <label>Kids Roller Coaster</label>
+            </value>
+            <value>
+                <fullName>Pedaling Merry-Go-Round</fullName>
+                <default>false</default>
+                <label>Pedaling Merry-Go-Round</label>
+            </value>
+            <value>
+                <fullName>Pool Deck</fullName>
+                <default>false</default>
+                <label>Pool Deck</label>
+            </value>
+            <value>
+                <fullName>Poolside Fresco Dining</fullName>
+                <default>false</default>
+                <label>Poolside Fresco Dining</label>
+            </value>
+            <value>
+                <fullName>LED Splash Pad</fullName>
+                <default>false</default>
+                <label>LED Splash Pad</label>
+            </value>
+            <value>
+                <fullName>Poolside Lounge</fullName>
+                <default>false</default>
+                <label>Poolside Lounge</label>
+            </value>
+            <value>
+                <fullName>Refreshment Corner</fullName>
+                <default>false</default>
+                <label>Refreshment Corner</label>
+            </value>
+            <value>
+                <fullName>Dedicated Kids Pool</fullName>
+                <default>false</default>
+                <label>Dedicated Kids Pool</label>
+            </value>
+            <value>
+                <fullName>Poolside Basketball Hoop</fullName>
+                <default>false</default>
+                <label>Poolside Basketball Hoop</label>
+            </value>
+            <value>
+                <fullName>Cabana Deck</fullName>
+                <default>false</default>
+                <label>Cabana Deck</label>
+            </value>
+            <value>
+                <fullName>Spa Hydraulic Water Massage Bed</fullName>
+                <default>false</default>
+                <label>Spa Hydraulic Water Massage Bed</label>
+            </value>
+            <value>
+                <fullName>Jacuzzi/Hydrotherapy</fullName>
+                <default>false</default>
+                <label>Jacuzzi/Hydrotherapy</label>
+            </value>
+            <value>
+                <fullName>Poolside Theatre</fullName>
+                <default>false</default>
+                <label>Poolside Theatre</label>
+            </value>
+            <value>
+                <fullName>Island Seating Area In The Pool</fullName>
+                <default>false</default>
+                <label>Island Seating Area In The Pool</label>
+            </value>
+            <value>
+                <fullName>Rain Curtain</fullName>
+                <default>false</default>
+                <label>Rain Curtain</label>
+            </value>
+            <value>
+                <fullName>Changing Rooms (M/F)</fullName>
+                <default>false</default>
+                <label>Changing Rooms (M/F)</label>
+            </value>
+            <value>
+                <fullName>Shower Rooms (M/F)</fullName>
+                <default>false</default>
+                <label>Shower Rooms (M/F)</label>
+            </value>
+            <value>
+                <fullName>Outdoor Rain Shower</fullName>
+                <default>false</default>
+                <label>Outdoor Rain Shower</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

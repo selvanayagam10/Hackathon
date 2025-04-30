@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entertainment_Features__c</fullName>
+    <label>Entertainment &amp; Features</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Multi-Purpose Lawn</fullName>
+                <default>false</default>
+                <label>Multi-Purpose Lawn</label>
+            </value>
+            <value>
+                <fullName>Central Basilica</fullName>
+                <default>false</default>
+                <label>Central Basilica</label>
+            </value>
+            <value>
+                <fullName>Campfire With Swing</fullName>
+                <default>false</default>
+                <label>Campfire With Swing</label>
+            </value>
+            <value>
+                <fullName>Bus And Shuttle Arrival</fullName>
+                <default>false</default>
+                <label>Bus And Shuttle Arrival</label>
+            </value>
+            <value>
+                <fullName>Statue Of Hercules</fullName>
+                <default>false</default>
+                <label>Statue Of Hercules</label>
+            </value>
+            <value>
+                <fullName>Entrance Plaza</fullName>
+                <default>false</default>
+                <label>Entrance Plaza</label>
+            </value>
+            <value>
+                <fullName>Air Pavilion</fullName>
+                <default>false</default>
+                <label>Air Pavilion</label>
+            </value>
+            <value>
+                <fullName>Pet Park</fullName>
+                <default>false</default>
+                <label>Pet Park</label>
+            </value>
+            <value>
+                <fullName>Imperial Avenue</fullName>
+                <default>false</default>
+                <label>Imperial Avenue</label>
+            </value>
+            <value>
+                <fullName>Tropical Forest With Elevated Walkway</fullName>
+                <default>false</default>
+                <label>Tropical Forest With Elevated Walkway</label>
+            </value>
+            <value>
+                <fullName>Labyrinth Garden</fullName>
+                <default>false</default>
+                <label>Labyrinth Garden</label>
+            </value>
+            <value>
+                <fullName>Apollo Garden</fullName>
+                <default>false</default>
+                <label>Apollo Garden</label>
+            </value>
+            <value>
+                <fullName>Soul Garden</fullName>
+                <default>false</default>
+                <label>Soul Garden</label>
+            </value>
+            <value>
+                <fullName>Leisure Pavilion</fullName>
+                <default>false</default>
+                <label>Leisure Pavilion</label>
+            </value>
+            <value>
+                <fullName>Tethy&apos;s Pavilion</fullName>
+                <default>false</default>
+                <label>Tethy&apos;s Pavilion</label>
+            </value>
+            <value>
+                <fullName>Tethy&apos;s Picnic</fullName>
+                <default>false</default>
+                <label>Tethy&apos;s Picnic</label>
+            </value>
+            <value>
+                <fullName>Grass Mound With Hammock</fullName>
+                <default>false</default>
+                <label>Grass Mound With Hammock</label>
+            </value>
+            <value>
+                <fullName>Herbs &amp; Spices Garden</fullName>
+                <default>false</default>
+                <label>Herbs &amp; Spices Garden</label>
+            </value>
+            <value>
+                <fullName>Hyacinth Garden</fullName>
+                <default>false</default>
+                <label>Hyacinth Garden</label>
+            </value>
+            <value>
+                <fullName>Roman Bridge</fullName>
+                <default>false</default>
+                <label>Roman Bridge</label>
+            </value>
+            <value>
+                <fullName>Lush Green Wall</fullName>
+                <default>false</default>
+                <label>Lush Green Wall</label>
+            </value>
+            <value>
+                <fullName>Augustine Of Hippo Statue Mound</fullName>
+                <default>false</default>
+                <label>Augustine Of Hippo Statue Mound</label>
+            </value>
+            <value>
+                <fullName>Rolling Mound</fullName>
+                <default>false</default>
+                <label>Rolling Mound</label>
+            </value>
+            <value>
+                <fullName>Picnic Corner</fullName>
+                <default>false</default>
+                <label>Picnic Corner</label>
+            </value>
+            <value>
+                <fullName>Shallow Pond With Island</fullName>
+                <default>false</default>
+                <label>Shallow Pond With Island</label>
+            </value>
+            <value>
+                <fullName>Aquileia Park</fullName>
+                <default>false</default>
+                <label>Aquileia Park</label>
+            </value>
+            <value>
+                <fullName>Giant Trampoline</fullName>
+                <default>false</default>
+                <label>Giant Trampoline</label>
+            </value>
+            <value>
+                <fullName>Garden Seating Patio</fullName>
+                <default>false</default>
+                <label>Garden Seating Patio</label>
+            </value>
+            <value>
+                <fullName>Corinth Canal</fullName>
+                <default>false</default>
+                <label>Corinth Canal</label>
+            </value>
+            <value>
+                <fullName>Sports Gallery</fullName>
+                <default>false</default>
+                <label>Sports Gallery</label>
+            </value>
+            <value>
+                <fullName>Citrus Plaza</fullName>
+                <default>false</default>
+                <label>Citrus Plaza</label>
+            </value>
+            <value>
+                <fullName>Palm Mound Patio</fullName>
+                <default>false</default>
+                <label>Palm Mound Patio</label>
+            </value>
+            <value>
+                <fullName>Outdoor Seating Lawn</fullName>
+                <default>false</default>
+                <label>Outdoor Seating Lawn</label>
+            </value>
+            <value>
+                <fullName>Aqua Retreat</fullName>
+                <default>false</default>
+                <label>Aqua Retreat</label>
+            </value>
+            <value>
+                <fullName>Fountain Of Wealth</fullName>
+                <default>false</default>
+                <label>Fountain Of Wealth</label>
+            </value>
+            <value>
+                <fullName>Outdoor Rainshower Plaza</fullName>
+                <default>false</default>
+                <label>Outdoor Rainshower Plaza</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

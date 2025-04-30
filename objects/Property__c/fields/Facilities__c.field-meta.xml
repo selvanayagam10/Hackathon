@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facilities__c</fullName>
+    <label>Facilities</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bicycle Rack</fullName>
+                <default>false</default>
+                <label>Bicycle Rack</label>
+            </value>
+            <value>
+                <fullName>Car Wash Bay</fullName>
+                <default>false</default>
+                <label>Car Wash Bay</label>
+            </value>
+            <value>
+                <fullName>Car Charging Bay</fullName>
+                <default>false</default>
+                <label>Car Charging Bay</label>
+            </value>
+            <value>
+                <fullName>ATM</fullName>
+                <default>false</default>
+                <label>ATM</label>
+            </value>
+            <value>
+                <fullName>Association Room</fullName>
+                <default>false</default>
+                <label>Association Room</label>
+            </value>
+            <value>
+                <fullName>Cafeteria</fullName>
+                <default>false</default>
+                <label>Cafeteria</label>
+            </value>
+            <value>
+                <fullName>FMS Room</fullName>
+                <default>false</default>
+                <label>FMS Room</label>
+            </value>
+            <value>
+                <fullName>Convenio Store</fullName>
+                <default>false</default>
+                <label>Convenio Store</label>
+            </value>
+            <value>
+                <fullName>Pantry &amp; Kitchen With Party Hall</fullName>
+                <default>false</default>
+                <label>Pantry &amp; Kitchen With Party Hall</label>
+            </value>
+            <value>
+                <fullName>Storage Room</fullName>
+                <default>false</default>
+                <label>Storage Room</label>
+            </value>
+            <value>
+                <fullName>Clinic</fullName>
+                <default>false</default>
+                <label>Clinic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

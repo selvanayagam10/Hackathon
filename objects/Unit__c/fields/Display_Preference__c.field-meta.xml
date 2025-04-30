@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Preference__c</fullName>
+    <label>Display Preference</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corner Units</fullName>
+                <default>false</default>
+                <label>Corner Units</label>
+            </value>
+            <value>
+                <fullName>High Foot Traffic Areas</fullName>
+                <default>false</default>
+                <label>High Foot Traffic Areas</label>
+            </value>
+            <value>
+                <fullName>Shopping Malls (Near Anchors or Entrances)</fullName>
+                <default>false</default>
+                <label>Shopping Malls (Near Anchors or Entrances)</label>
+            </value>
+            <value>
+                <fullName>Tourist Areas</fullName>
+                <default>false</default>
+                <label>Tourist Areas</label>
+            </value>
+            <value>
+                <fullName>Residential Neighborhood Corners</fullName>
+                <default>false</default>
+                <label>Residential Neighborhood Corners</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Indoor_Amenities__c</fullName>
+    <label>Indoor Amenities</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Washer and Dryer in-unit</fullName>
+                <default>false</default>
+                <label>Washer and Dryer in-unit</label>
+            </value>
+            <value>
+                <fullName>Dishwasher</fullName>
+                <default>false</default>
+                <label>Dishwasher</label>
+            </value>
+            <value>
+                <fullName>High-end Finishes and Fixtures</fullName>
+                <default>false</default>
+                <label>High-end Finishes and Fixtures</label>
+            </value>
+            <value>
+                <fullName>Central air conditioning and Heating</fullName>
+                <default>false</default>
+                <label>Central air conditioning and Heating</label>
+            </value>
+            <value>
+                <fullName>Balcony</fullName>
+                <default>false</default>
+                <label>Balcony</label>
+            </value>
+            <value>
+                <fullName>Smart home</fullName>
+                <default>false</default>
+                <label>Smart home</label>
+            </value>
+            <value>
+                <fullName>Security systems and intercom</fullName>
+                <default>false</default>
+                <label>Security systems and intercom</label>
+            </value>
+            <value>
+                <fullName>Large bathtubs</fullName>
+                <default>false</default>
+                <label>Large bathtubs</label>
+            </value>
+            <value>
+                <fullName>Complimentary Wi-Fi</fullName>
+                <default>false</default>
+                <label>Complimentary Wi-Fi</label>
+            </value>
+            <value>
+                <fullName>Online Rent Options</fullName>
+                <default>false</default>
+                <label>Online Rent Options</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Room_Features__c</fullName>
+    <label>Room Features</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Attached Bathroom</fullName>
+                <default>false</default>
+                <label>Attached Bathroom</label>
+            </value>
+            <value>
+                <fullName>Walk-in Closet / Wardrobe</fullName>
+                <default>false</default>
+                <label>Walk-in Closet / Wardrobe</label>
+            </value>
+            <value>
+                <fullName>Dressing Area</fullName>
+                <default>false</default>
+                <label>Dressing Area</label>
+            </value>
+            <value>
+                <fullName>Balcony Access</fullName>
+                <default>false</default>
+                <label>Balcony Access</label>
+            </value>
+            <value>
+                <fullName>Bay Window</fullName>
+                <default>false</default>
+                <label>Bay Window</label>
+            </value>
+            <value>
+                <fullName>False Ceiling with Cove Lighting</fullName>
+                <default>false</default>
+                <label>False Ceiling with Cove Lighting</label>
+            </value>
+            <value>
+                <fullName>Wooden Flooring</fullName>
+                <default>false</default>
+                <label>Wooden Flooring</label>
+            </value>
+            <value>
+                <fullName>Wall-Mounted TV</fullName>
+                <default>false</default>
+                <label>Wall-Mounted TV</label>
+            </value>
+            <value>
+                <fullName>Bedside Reading Lights</fullName>
+                <default>false</default>
+                <label>Bedside Reading Lights</label>
+            </value>
+            <value>
+                <fullName>Air Conditioning Unit</fullName>
+                <default>false</default>
+                <label>Air Conditioning Unit</label>
+            </value>
+            <value>
+                <fullName>Smart Lighting</fullName>
+                <default>false</default>
+                <label>Smart Lighting</label>
+            </value>
+            <value>
+                <fullName>Soundproof Windows</fullName>
+                <default>false</default>
+                <label>Soundproof Windows</label>
+            </value>
+            <value>
+                <fullName>Study Nook / Desk</fullName>
+                <default>false</default>
+                <label>Study Nook / Desk</label>
+            </value>
+            <value>
+                <fullName>Built-in Shelves</fullName>
+                <default>false</default>
+                <label>Built-in Shelves</label>
+            </value>
+            <value>
+                <fullName>Floor-to-Ceiling Windows</fullName>
+                <default>false</default>
+                <label>Floor-to-Ceiling Windows</label>
+            </value>
+            <value>
+                <fullName>Modular Cabinets</fullName>
+                <default>false</default>
+                <label>Modular Cabinets</label>
+            </value>
+            <value>
+                <fullName>Granite / Quartz Countertop</fullName>
+                <default>false</default>
+                <label>Granite / Quartz Countertop</label>
+            </value>
+            <value>
+                <fullName>Built-in Hob &amp; Chimney</fullName>
+                <default>false</default>
+                <label>Built-in Hob &amp; Chimney</label>
+            </value>
+            <value>
+                <fullName>Kitchen Island / Breakfast Counter</fullName>
+                <default>false</default>
+                <label>Kitchen Island / Breakfast Counter</label>
+            </value>
+            <value>
+                <fullName>Pantry Storage</fullName>
+                <default>false</default>
+                <label>Pantry Storage</label>
+            </value>
+            <value>
+                <fullName>Double Sink</fullName>
+                <default>false</default>
+                <label>Double Sink</label>
+            </value>
+            <value>
+                <fullName>Water Purifier</fullName>
+                <default>false</default>
+                <label>Water Purifier</label>
+            </value>
+            <value>
+                <fullName>Pull-Out Drawers</fullName>
+                <default>false</default>
+                <label>Pull-Out Drawers</label>
+            </value>
+            <value>
+                <fullName>Microwave / Oven Slot</fullName>
+                <default>false</default>
+                <label>Microwave / Oven Slot</label>
+            </value>
+            <value>
+                <fullName>Appliance Garage</fullName>
+                <default>false</default>
+                <label>Appliance Garage</label>
+            </value>
+            <value>
+                <fullName>Under-cabinet Lighting</fullName>
+                <default>false</default>
+                <label>Under-cabinet Lighting</label>
+            </value>
+            <value>
+                <fullName>Dishwasher Provision</fullName>
+                <default>false</default>
+                <label>Dishwasher Provision</label>
+            </value>
+            <value>
+                <fullName>Tiled Backsplash</fullName>
+                <default>false</default>
+                <label>Tiled Backsplash</label>
+            </value>
+            <value>
+                <fullName>Smart Kitchen Controls</fullName>
+                <default>false</default>
+                <label>Smart Kitchen Controls</label>
+            </value>
+            <value>
+                <fullName>Chimney Exhaust System</fullName>
+                <default>false</default>
+                <label>Chimney Exhaust System</label>
+            </value>
+            <value>
+                <fullName>Walk-in Shower</fullName>
+                <default>false</default>
+                <label>Walk-in Shower</label>
+            </value>
+            <value>
+                <fullName>Bathtub</fullName>
+                <default>false</default>
+                <label>Bathtub</label>
+            </value>
+            <value>
+                <fullName>Rain Shower</fullName>
+                <default>false</default>
+                <label>Rain Shower</label>
+            </value>
+            <value>
+                <fullName>Wall-Mounted Toilet</fullName>
+                <default>false</default>
+                <label>Wall-Mounted Toilet</label>
+            </value>
+            <value>
+                <fullName>Vanity Unit with Mirror</fullName>
+                <default>false</default>
+                <label>Vanity Unit with Mirror</label>
+            </value>
+            <value>
+                <fullName>Anti-Skid Tiles</fullName>
+                <default>false</default>
+                <label>Anti-Skid Tiles</label>
+            </value>
+            <value>
+                <fullName>Glass Shower Partition</fullName>
+                <default>false</default>
+                <label>Glass Shower Partition</label>
+            </value>
+            <value>
+                <fullName>Geyser / Water Heater</fullName>
+                <default>false</default>
+                <label>Geyser / Water Heater</label>
+            </value>
+            <value>
+                <fullName>Motion Sensor Lighting</fullName>
+                <default>false</default>
+                <label>Motion Sensor Lighting</label>
+            </value>
+            <value>
+                <fullName>Exhaust Fan</fullName>
+                <default>false</default>
+                <label>Exhaust Fan</label>
+            </value>
+            <value>
+                <fullName>Smart Mirror with LED</fullName>
+                <default>false</default>
+                <label>Smart Mirror with LED</label>
+            </value>
+            <value>
+                <fullName>Floor Drainage System</fullName>
+                <default>false</default>
+                <label>Floor Drainage System</label>
+            </value>
+            <value>
+                <fullName>Storage Cabinets</fullName>
+                <default>false</default>
+                <label>Storage Cabinets</label>
+            </value>
+            <value>
+                <fullName>Towel Warmer</fullName>
+                <default>false</default>
+                <label>Towel Warmer</label>
+            </value>
+            <value>
+                <fullName>False Ceiling with LED Strip</fullName>
+                <default>false</default>
+                <label>False Ceiling with LED Strip</label>
+            </value>
+            <value>
+                <fullName>Feature Wall / Accent Wall</fullName>
+                <default>false</default>
+                <label>Feature Wall / Accent Wall</label>
+            </value>
+            <value>
+                <fullName>Home Theater Setup</fullName>
+                <default>false</default>
+                <label>Home Theater Setup</label>
+            </value>
+            <value>
+                <fullName>Floor-to-Ceiling Glass</fullName>
+                <default>false</default>
+                <label>Floor-to-Ceiling Glass</label>
+            </value>
+            <value>
+                <fullName>Open Plan Layout</fullName>
+                <default>false</default>
+                <label>Open Plan Layout</label>
+            </value>
+            <value>
+                <fullName>Smart Lighting System</fullName>
+                <default>false</default>
+                <label>Smart Lighting System</label>
+            </value>
+            <value>
+                <fullName>Ceiling Fan</fullName>
+                <default>false</default>
+                <label>Ceiling Fan</label>
+            </value>
+            <value>
+                <fullName>Designer Flooring</fullName>
+                <default>false</default>
+                <label>Designer Flooring</label>
+            </value>
+            <value>
+                <fullName>Large Windows / Ventilation</fullName>
+                <default>false</default>
+                <label>Large Windows / Ventilation</label>
+            </value>
+            <value>
+                <fullName>Connected Dining Area</fullName>
+                <default>false</default>
+                <label>Connected Dining Area</label>
+            </value>
+            <value>
+                <fullName>Air Conditioning</fullName>
+                <default>false</default>
+                <label>Air Conditioning</label>
+            </value>
+            <value>
+                <fullName>Decorative Light Fixtures</fullName>
+                <default>false</default>
+                <label>Decorative Light Fixtures</label>
+            </value>
+            <value>
+                <fullName>Sound System Integration</fullName>
+                <default>false</default>
+                <label>Sound System Integration</label>
+            </value>
+            <value>
+                <fullName>Deck Flooring (Wooden/Composite)</fullName>
+                <default>false</default>
+                <label>Deck Flooring (Wooden/Composite)</label>
+            </value>
+            <value>
+                <fullName>Glass or Iron Railing</fullName>
+                <default>false</default>
+                <label>Glass or Iron Railing</label>
+            </value>
+            <value>
+                <fullName>Garden Planters</fullName>
+                <default>false</default>
+                <label>Garden Planters</label>
+            </value>
+            <value>
+                <fullName>Outdoor Furniture Provision</fullName>
+                <default>false</default>
+                <label>Outdoor Furniture Provision</label>
+            </value>
+            <value>
+                <fullName>Utility Sink</fullName>
+                <default>false</default>
+                <label>Utility Sink</label>
+            </value>
+            <value>
+                <fullName>Swing or Hammock Hook</fullName>
+                <default>false</default>
+                <label>Swing or Hammock Hook</label>
+            </value>
+            <value>
+                <fullName>Lighting Points</fullName>
+                <default>false</default>
+                <label>Lighting Points</label>
+            </value>
+            <value>
+                <fullName>Drying Rack / Laundry Provision</fullName>
+                <default>false</default>
+                <label>Drying Rack / Laundry Provision</label>
+            </value>
+            <value>
+                <fullName>BBQ Counter</fullName>
+                <default>false</default>
+                <label>BBQ Counter</label>
+            </value>
+            <value>
+                <fullName>View Facing (Park, Pool, City)</fullName>
+                <default>false</default>
+                <label>View Facing (Park, Pool, City)</label>
+            </value>
+            <value>
+                <fullName>Washing Machine Provision</fullName>
+                <default>false</default>
+                <label>Washing Machine Provision</label>
+            </value>
+            <value>
+                <fullName>Dryer Slot</fullName>
+                <default>false</default>
+                <label>Dryer Slot</label>
+            </value>
+            <value>
+                <fullName>Overhead Storage</fullName>
+                <default>false</default>
+                <label>Overhead Storage</label>
+            </value>
+            <value>
+                <fullName>Sink with Drain Board</fullName>
+                <default>false</default>
+                <label>Sink with Drain Board</label>
+            </value>
+            <value>
+                <fullName>Clothes Hanging Rod</fullName>
+                <default>false</default>
+                <label>Clothes Hanging Rod</label>
+            </value>
+            <value>
+                <fullName>Ironing Board Space</fullName>
+                <default>false</default>
+                <label>Ironing Board Space</label>
+            </value>
+            <value>
+                <fullName>Exhaust Fan / Ventilation</fullName>
+                <default>false</default>
+                <label>Exhaust Fan / Ventilation</label>
+            </value>
+            <value>
+                <fullName>Utility Rack</fullName>
+                <default>false</default>
+                <label>Utility Rack</label>
+            </value>
+            <value>
+                <fullName>Chalkboard / Whiteboard Wall</fullName>
+                <default>false</default>
+                <label>Chalkboard / Whiteboard Wall</label>
+            </value>
+            <value>
+                <fullName>Wall-Mounted Storage</fullName>
+                <default>false</default>
+                <label>Wall-Mounted Storage</label>
+            </value>
+            <value>
+                <fullName>Soft Flooring</fullName>
+                <default>false</default>
+                <label>Soft Flooring</label>
+            </value>
+            <value>
+                <fullName>Bunk Bed Setup</fullName>
+                <default>false</default>
+                <label>Bunk Bed Setup</label>
+            </value>
+            <value>
+                <fullName>Study Table</fullName>
+                <default>false</default>
+                <label>Study Table</label>
+            </value>
+            <value>
+                <fullName>Toy Organizer</fullName>
+                <default>false</default>
+                <label>Toy Organizer</label>
+            </value>
+            <value>
+                <fullName>Safety Locks</fullName>
+                <default>false</default>
+                <label>Safety Locks</label>
+            </value>
+            <value>
+                <fullName>Interactive Wall Panels</fullName>
+                <default>false</default>
+                <label>Interactive Wall Panels</label>
+            </value>
+            <value>
+                <fullName>Gym Mirror Panel</fullName>
+                <default>false</default>
+                <label>Gym Mirror Panel</label>
+            </value>
+            <value>
+                <fullName>Rubber Flooring (for Home Gym)</fullName>
+                <default>false</default>
+                <label>Rubber Flooring (for Home Gym)</label>
+            </value>
+            <value>
+                <fullName>Soundproofing (Music/Media Room)</fullName>
+                <default>false</default>
+                <label>Soundproofing (Music/Media Room)</label>
+            </value>
+            <value>
+                <fullName>Spa Lighting</fullName>
+                <default>false</default>
+                <label>Spa Lighting</label>
+            </value>
+            <value>
+                <fullName>Yoga Mat Slots</fullName>
+                <default>false</default>
+                <label>Yoga Mat Slots</label>
+            </value>
+            <value>
+                <fullName>Air Purifier</fullName>
+                <default>false</default>
+                <label>Air Purifier</label>
+            </value>
+            <value>
+                <fullName>Meditation Niche</fullName>
+                <default>false</default>
+                <label>Meditation Niche</label>
+            </value>
+            <value>
+                <fullName>Projector Setup</fullName>
+                <default>false</default>
+                <label>Projector Setup</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

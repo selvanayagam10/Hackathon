@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amenities__c</fullName>
+    <label>Outdoor Amenities</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fitness Centre</fullName>
+                <default>false</default>
+                <label>Fitness Centre</label>
+            </value>
+            <value>
+                <fullName>Parking</fullName>
+                <default>false</default>
+                <label>Parking</label>
+            </value>
+            <value>
+                <fullName>Swimming Pools</fullName>
+                <default>false</default>
+                <label>Swimming Pools</label>
+            </value>
+            <value>
+                <fullName>Spa</fullName>
+                <default>false</default>
+                <label>Spa</label>
+            </value>
+            <value>
+                <fullName>Billiards Table</fullName>
+                <default>false</default>
+                <label>Billiards Table</label>
+            </value>
+            <value>
+                <fullName>Package Lockers</fullName>
+                <default>false</default>
+                <label>Package Lockers</label>
+            </value>
+            <value>
+                <fullName>Playgrounds</fullName>
+                <default>false</default>
+                <label>Playgrounds</label>
+            </value>
+            <value>
+                <fullName>Walking Paths</fullName>
+                <default>false</default>
+                <label>Walking Paths</label>
+            </value>
+            <value>
+                <fullName>Pet-friendly spaces</fullName>
+                <default>false</default>
+                <label>Pet-friendly spaces</label>
+            </value>
+            <value>
+                <fullName>Parks</fullName>
+                <default>false</default>
+                <label>Parks</label>
+            </value>
+            <value>
+                <fullName>Valet Trash</fullName>
+                <default>false</default>
+                <label>Valet Trash</label>
+            </value>
+            <value>
+                <fullName>Surveillance cameras</fullName>
+                <default>false</default>
+                <label>Surveillance cameras</label>
+            </value>
+            <value>
+                <fullName>Green Surrounding Neighborhood</fullName>
+                <default>false</default>
+                <label>Green Surrounding Neighborhood</label>
+            </value>
+            <value>
+                <fullName>Building Wi-Fi</fullName>
+                <default>false</default>
+                <label>Building Wi-Fi</label>
+            </value>
+            <value>
+                <fullName>Clubhouse</fullName>
+                <default>false</default>
+                <label>Clubhouse</label>
+            </value>
+            <value>
+                <fullName>Party room</fullName>
+                <default>false</default>
+                <label>Party room</label>
+            </value>
+            <value>
+                <fullName>Social area or Rooftop garden</fullName>
+                <default>false</default>
+                <label>Social area or Rooftop garden</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

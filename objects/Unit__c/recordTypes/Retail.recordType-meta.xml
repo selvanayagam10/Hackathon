@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retail</fullName>
+    <active>true</active>
+    <description>Retail unit</description>
+    <label>Retail</label>
+    <picklistValues>
+        <picklist>Amenities__c</picklist>
+        <values>
+            <fullName>Balcony</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Basketball court</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central air conditioning and Heating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complimentary Wi-Fi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dishwasher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gym</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High-end Finishes and Fixtures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Large bathtubs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Rent Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security systems and intercom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swimming Pool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Washer and Dryer in-unit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Asset_Class__c</picklist>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Display_Preference__c</picklist>
+        <values>
+            <fullName>Corner Units</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Foot Traffic Areas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential Neighborhood Corners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shopping Malls %28Near Anchors or Entrances%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tourist Areas</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Furnishings__c</picklist>
+        <values>
+            <fullName>Fully Furnished</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semi Furnished</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfurnished</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unit_Type__c</picklist>
+        <values>
+            <fullName>Apartment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deluxe Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luxury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Space</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Penthouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presidential Suite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Studio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Villa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>View__c</picklist>
+        <values>
+            <fullName>City View</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marina View</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sea View</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
